@@ -39,13 +39,64 @@ and open the template in the editor.
                         </li>
                     </ul>   
                 </div>
+                <a class="navbar-brand text-white" href="#"><h5>Nombre de Usuario</h5></a>
             </nav>
         </header>
         <div id="principal">
-            <div class="container-fluid" style="background-color: #EDEDED;"><!-- Seccion central (Visualizar tarea) -->
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 container-fluid"><!-- Seccion izquierda (Visualizar tarea) -->
+                    <div style="background-color: #EDEDED; margin: 5%;">
+                        <h5 align="center">Información del Cliente</h5>
+                        <div style="margin: 5%;">
+                            <div class="form-group">
+                                <label for="nomCliente">Nombre del cliente</label>
+                                <input type="text" id="nomCliente" name="nomCliente" class="form-control" disabled>  
+                            </div>                         
+                            <div class="form-group">
+                                <label for="dirCliente">Dirección</label>
+                                <input type="text" id="dirCliente" name="dirCliente" class="form-control" disabled>  
+                            </div>
+                            <div class="form-group">
+                                <label for="codigoCliente">Código postal</label>
+                                <input type="text" class="form-control" id="codigoCliente" name="codigoCliente" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="correoCliente">Correo</label>
+                                <input type="text" class="form-control" id="correoCliente" name="correoCliente" disabled>
+                            </div>
+                            <div class="form-group">
+                                <br>
+                            </div>
+                        </div>
 
-
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 container-fluid"><!-- Seccion central (Visualizar tarea) -->
+                    <div style="background-color: #EDEDED; margin-top: 2.5%;">
+                        <div style="margin: 2.5%;">
+                            <h5 align="center">Promociones disponibles</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 container-fluid" ><!-- Seccion derecha (Visualizar tarea) -->
+                    <div style="background-color: #EDEDED; margin: 5%;">
+                        <div style="margin: 5%;">
+                            <h5 align="center">Buscar Cliente</h5>
+                            <form role="form" method="post" action="#">
+                                <div class="form-group">
+                                    <label for="idCliente">Id del Cliente:</label>
+                                    <input type="text" class="form-control" id="idCliente" name="idCliente" required="required">
+                                </div>         
+                                <button type="submit" class="btn btn-default">Buscar</button>
+                                <div class="form-group">
+                                <br>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
 
     </div> 
