@@ -22,20 +22,19 @@ and open the template in the editor.
         <header class="sticky-top">
             <!--barra de navegacion creada con bootstrap-->
             <nav class="navbar navbar-expand-lg navbar-dark barra bg-primary" >
-                <a class="navbar-brand text-white" href="../Gerencia/InicioGerencia.jsp"><h4>CRM</h4></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav mr-auto">                    
                         <li class="nav-item">
-                            <a class="nav-link text-white" id="Inicio"  aria-haspopup="true" aria-expanded="false">Inicio</a>
+                            <a href="../Usuario/UsuarioInicio.jsp" class="nav-link text-white" id="Inicio"  aria-haspopup="true" aria-expanded="false"><h5>Inicio</h5></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" id="Bitacora"  aria-haspopup="true" aria-expanded="false">Bitácora</a>
+                            <a class="nav-link text-white" id="Bitacora"  aria-haspopup="true" aria-expanded="false"><h5>Bitácora</h5></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" id="Informe"  aria-haspopup="true" aria-expanded="false">Informe</a>
+                            <a class="nav-link text-white" id="Informe"  aria-haspopup="true" aria-expanded="false"><h5>Informe</h5></a>
                         </li>
                     </ul>   
                 </div>
