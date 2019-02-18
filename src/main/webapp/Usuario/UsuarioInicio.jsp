@@ -75,6 +75,38 @@ and open the template in the editor.
                     <div style="background-color: #EDEDED; margin-top: 2.5%;">
                         <div style="margin: 2.5%;">
                             <h5 align="center">Promociones disponibles</h5>
+                            <br>
+                            <table class="table">
+                                <thead class=" thead-light">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                        <th scope="col">Handle</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
                         </div>
                     </div>
                 </div>
@@ -89,8 +121,8 @@ and open the template in the editor.
                                 </div>         
                                 <button type="submit" class="btn btn-default">Buscar</button>
                                 <div class="form-group">
-                                <br>
-                            </div>
+                                    <br>
+                                </div>
                             </form>
                         </div>
                     </div>
