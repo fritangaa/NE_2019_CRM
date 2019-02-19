@@ -17,6 +17,7 @@ and open the template in the editor.
         <script src="../Recursos/Bootstrap/include/popper.min.js" type="text/javascript"></script>
         <script src="../Gerencia/validaciones/validacion.js" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
+        <script src="../Recursos/js/validaciones.js" type="text/javascript"></script>
     </head>
     <body>
         <header class="sticky-top">
@@ -113,10 +114,10 @@ and open the template in the editor.
                     <div style="background-color: #EDEDED; margin: 5%;">
                         <div style="margin: 5%;">
                             <h5 align="center">Buscar Cliente</h5>
-                            <form role="form" method="post" action="#">
+                            <form role="form" method="post" onsubmit="return BuscarCliente()">
                                 <div class="form-group">
                                     <label for="idCliente">Id del Cliente:</label>
-                                    <input type="text" class="form-control" id="idCliente" name="idCliente" required="required">
+                                    <input type="text" class="form-control" id="idCliente" name="idCliente" onkeypress="return SoloNumeros(event)">
                                 </div>         
                                 <button type="submit" class="btn btn-default">Buscar</button>
                                 <div class="form-group">
