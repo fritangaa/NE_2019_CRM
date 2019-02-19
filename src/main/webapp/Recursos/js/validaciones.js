@@ -13,6 +13,10 @@ function BuscarCliente(){
        {
         alert("ingrese el id del cliente en numeros");
         return false;
+    }
+    if (id<1){
+        alert("ingrese un id que no sea cero ni negativo")
+        
     } 
 
 }
