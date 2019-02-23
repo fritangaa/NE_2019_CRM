@@ -21,6 +21,13 @@ function BuscarCliente(){
 
 }
 
+function vali_cliente(){
+       
+    var valor= document.getElementById('idcliente').value;
+       
+    }
+    
+
 
 
 function SoloNumeros(evt){

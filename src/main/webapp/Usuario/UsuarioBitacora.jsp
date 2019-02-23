@@ -1,3 +1,4 @@
+<%@page import="java.sql.ResultSet"%>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -43,103 +44,79 @@ and open the template in the editor.
                 <a class="navbar-brand text-white" href="#"><h5>Nombre de Usuario</h5></a>
             </nav>
         </header>
-        <div id="principal">
+        
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 container-fluid"><!-- Seccion central (Visualizar tarea) -->
-                    <div style="background-color: #EDEDED; margin-left: 2.5%;">
-                        <div style="margin: 2.5%;">
-                            <h5 align="center">Bitácora del cliente</h5>
-                            <br>
-                            <table class="table">
-                                <thead class=" thead-light">
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Día</th>
-                                        <th scope="col">Descripción</th>
-                                        <th scope="col">Atendio</th>
-                                        <th scope="col">Número</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>@twitter</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <br>
-                        </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div>
+                        <center>
+                            <h4>Consulta de usuario</h4>
+                        </center>
+                    </div>
+                    
+                    <div>
+                        <form action="../Usuario/UsuarioBitacora.jsp" method="GET">
+                            <span><span>1&nbsp;&nbsp;</span>Consultas</span><br><br>
+                            <input type="text" name="idcliente" id="idcliente" placeholder="id Cliente" maxlength="3" required>
+                            <input type="submit" name="ConsultaCliente" class="btn btn-danger" value="Consultar">
+                        </form>
+                        
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 container-fluid" ><!-- Seccion derecha (Visualizar tarea) -->
-                    <div style="background-color: #EDEDED; margin: 5%;">
-                        <div style="margin: 5%;">
-                            <h5 align="center">Buscar Cliente</h5>
-                            <form role="form" method="post" onsubmit="return BuscarCliente()">
-                                <div class="form-group">
-                                    <label for="idCliente">Id del Cliente:</label>
-                                    <input type="text" class="form-control" id="idCliente" name="idCliente" onkeypress="return SoloNumeros(event)">
-                                </div>         
-                                <button type="submit" class="btn btn-default">Buscar</button>
-                                <div class="form-group">
-                                    <br>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 container-fluid"><!-- Seccion central (Visualizar tarea) -->
-                    <div style="background-color: #EDEDED; margin-left: 2.5%;">
-                        <div style="margin: 2.5%;">
-                            <h5 align="center">Comentario</h5>
-                            <br>
-                            <form role="form" method="post" action="#">
-                                <div class="row">
-                                    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 form-group">
-                                        <input type="text" class="form-control" id="comentarioCliente" name="comentarioCliente" required="required">
-                                    </div>     
-                                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-group">
-                                        <button type="submit" class="btn btn-success">Agregar</button>
-                                    </div>
-                                </div>
-                                
-                            </form>
-
-                            <br>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 container-fluid" ><!-- Seccion derecha (Visualizar tarea) -->
-                    <div style="background-color: #EDEDED; margin: 5%;">
-                        <div style="margin: 5%;">
-
-                        </div>
+                
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                        <tr>
+                                            <th scope="col">ID bitacora</th>
+                                            <th scope="col">Fecha</th>
+                                            <th scope="col">Actividad</th>
+                                            <th scope="col">ID usuario</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    
+                                    <jsp:useBean id="interTabla" scope="page" class="com.crm.pojo.bitacora.QuerysCRM"/>
+                                    <%
+                                        String parametro = request.getParameter("idcliente");
+                                        ResultSet rsTabla = interTabla.consultaGeneral(parametro);
+                                    %>
+                                    <tbody>
+                                        <%
+                                            while (rsTabla.next()) {
+                                        %>
+                                        <tr id="modalInter">
+                                            <td><%=rsTabla.getString(1)%></td>
+                                            <td><%=rsTabla.getString(2)%></td>
+                                            <td><%=rsTabla.getString(3)%></td>
+                                            <td><%=rsTabla.getString(4)%></td>
+                                            
+                                      
+                                        </tr>
+                                        <%
+                                            }
+                                        %>
+                                    </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
-
-    </div> 
-</div>
+                                    
+                                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+        <div>
+            
+            <form action="" method="GET">
+                            <span><span>2&nbsp;&nbsp;</span>Ingresar Comentario</span><br><br>
+                            <input type="text" name="comentario" id="comentario" placeholder="Ingresa comentario" style="WIDTH: 228px; HEIGHT: 98px" size=32 required>
+                            <h1>&nbsp;</h1>
+                            <input type="submit" name="ComentarioCliente" class="btn btn-danger" value="Comentario">
+                        </form>
+                                        
+        </div>
+                                    </div>
+         
 </body>
 </html>
 
