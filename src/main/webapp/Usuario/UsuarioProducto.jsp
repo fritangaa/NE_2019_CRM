@@ -1,4 +1,3 @@
-<%@page import="java.sql.ResultSet"%>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -44,66 +43,64 @@ and open the template in the editor.
                 <a class="navbar-brand text-white" href="#"><h5>Nombre de Usuario</h5></a>
             </nav>
         </header>
-        
-        <div class="container-fluid">
+        <div id="principal">
             <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                    <div>
-                        <center>
-                            <h4>Consulta de usuario</h4>
-                        </center>
-                    </div>
-                    
-                    <div>
-                        <form action="../Usuario/UsuarioBitacora.jsp" method="GET">
-                            <span><span>1&nbsp;&nbsp;</span>Consultas</span><br><br>
-                            <input type="text" name="idcliente" id="idcliente" placeholder="id Cliente" maxlength="3" required>
-                            <input type="submit" name="ConsultaCliente" class="btn btn-danger" value="Consultar">
-                        </form>
-                        
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 container-fluid" ><!-- Seccion derecha (Visualizar tarea) -->
+                    <div style="background-color: #EDEDED; margin: 5%;">
+                        <div style="margin: 5%;">
+                            
+                        </div>
                     </div>
                 </div>
-                
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <thead>
-                                        <tr>
-                                            <th scope="col">ID Cliente</th>
-                                            <th scope="col">Nombre</th>
-                                            <th scope="col">Direcci&oacute;n</th>
-                                            <th scope="col">C&oacute;digo Postal</th>
-                                            <th scope="col">Email</th>
-                                        </tr>
-                                    </thead>
-                                    
-                                    <jsp:useBean id="interTabla" scope="page" class="com.crm.pojo.bitacora.QuerysCRM"/>
-                                    <%
-                                        String parametro = request.getParameter("idcliente");
-                                        ResultSet rsTabla = interTabla.consultaGeneral(parametro);
-                                    %>
-                                    <tbody>
-                                        <%
-                                            while (rsTabla.next()) {
-                                        %>
-                                        <tr id="modalInter">
-                                            <td><%=rsTabla.getString(1)%></td>
-                                            <td><%=rsTabla.getString(2)%></td>
-                                            <td><%=rsTabla.getString(3)%></td>
-                                            <td><%=rsTabla.getString(4)%></td>
-                                            <td><%=rsTabla.getString(5)%></td>
-                                      
-                                        </tr>
-                                        <%
-                                            }
-                                        %>
-                                    </tbody>
-                        </table>
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 container-fluid"><!-- Seccion central (Visualizar tarea) -->
+                    <div style="background-color: #EDEDED; margin-left: 2.5%;">
+                        <div style="margin: 2.5%;">
+                            <h5 align="center">Productos</h5>
+                            <br>
+                            <table class="table">
+                                <thead class=" thead-light">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Producto</th>
+                                        <th scope="col">Proveedor</th>
+                                        <th scope="col">Descripción</th>
+                                        <th scope="col">Precio</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Cable coaxial</td>
+                                        <td>Calbes CA CV</td>
+                                        <td>Calbe de 2m</td>
+                                        <td>$150</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Router MB-878</td>
+                                        <td>CISCO</td>
+                                        <td>V2.5</td>
+                                        <td>$45,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 container-fluid" ><!-- Seccion derecha (Visualizar tarea) -->
+                    <div style="background-color: #EDEDED; margin: 5%;">
+                        <div style="margin: 5%;">
+                            
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>      
-         
+            
+        </div>
+
+    </div> 
+</div>
 </body>
 </html>
 
