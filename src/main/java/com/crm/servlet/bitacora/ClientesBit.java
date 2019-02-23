@@ -3,22 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.crm.prueba.git;
+package com.crm.servlet.bitacora;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import com.crm.db.Conexion;
+import com.crm.pojo.bitacora.ClienteBean;
+import com.crm.pojo.bitacora.QuerysCRM;
 
 /**
  *
- * @author maxim
+ * @author Nesto
  */
-@WebServlet(name = "Hola", urlPatterns = {"/Hola"})
-public class Hola extends HttpServlet {
+@WebServlet(name = "ClientesBit", urlPatterns = {"/ClientesBit"})
+public class ClientesBit extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,20 +38,20 @@ public class Hola extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, ClassNotFoundException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Hola</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Hola at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+        
+        QuerysCRM c = new QuerysCRM();
+        
+        
+        String idcliente = request.getParameter("idcliente");
+        String nombreCliente = request.getParameter("nomCliente");
+        String direccionCliente = request.getParameter("dirCliente");
+        String cpCliente = request.getParameter("cpCliente");
+        String emailCliente = request.getParameter("emailCliente");
+        
+        ClienteBean cliBean = new ClienteBean(idcliente);
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -58,7 +66,13 @@ public class Hola extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(ClientesBit.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(ClientesBit.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -72,7 +86,13 @@ public class Hola extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(ClientesBit.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(ClientesBit.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
