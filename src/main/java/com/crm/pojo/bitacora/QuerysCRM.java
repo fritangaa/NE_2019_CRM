@@ -43,14 +43,14 @@ public class QuerysCRM {
                  openDB();
                   PreparedStatement ps;
                     if (parametro != null) {
-                                                    ps = conn.prepareStatement("select id_cliente, nombre, direccion, cp, email from cliente where id_cliente='"+parametro+"' ;");
+                                                    ps = conn.prepareStatement("select id_bu, fecha, actividad, idusuario from bitacora_de_usuarios where idusuario='"+parametro+"' ;");
                                                     ResultSet rs= ps.executeQuery();
                                                       System.out.println(ps);
                     
                     closeDB();
                   return rs;
          }else {
-                     ps = conn.prepareStatement("select * from cliente"
+                     ps = conn.prepareStatement("select * from bitacora_de_usuarios"
                                                    );
                                                     ResultSet rs= ps.executeQuery();
                                                       System.out.println(ps);

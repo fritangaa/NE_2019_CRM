@@ -69,11 +69,11 @@ and open the template in the editor.
                         <table class="table table-striped">
                             <thead>
                                         <tr>
-                                            <th scope="col">ID Cliente</th>
-                                            <th scope="col">Nombre</th>
-                                            <th scope="col">Direcci&oacute;n</th>
-                                            <th scope="col">C&oacute;digo Postal</th>
-                                            <th scope="col">Email</th>
+                                            <th scope="col">ID bitacora</th>
+                                            <th scope="col">Fecha</th>
+                                            <th scope="col">Actividad</th>
+                                            <th scope="col">ID usuario</th>
+                                            
                                         </tr>
                                     </thead>
                                     
@@ -91,7 +91,7 @@ and open the template in the editor.
                                             <td><%=rsTabla.getString(2)%></td>
                                             <td><%=rsTabla.getString(3)%></td>
                                             <td><%=rsTabla.getString(4)%></td>
-                                            <td><%=rsTabla.getString(5)%></td>
+                                            
                                       
                                         </tr>
                                         <%
@@ -102,7 +102,20 @@ and open the template in the editor.
                     </div>
                 </div>
             </div>
-        </div>      
+        </div>
+                                    
+                                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+        <div>
+            
+            <form action="" method="GET">
+                            <span><span>2&nbsp;&nbsp;</span>Ingresar Comentario</span><br><br>
+                            <input type="text" name="comentario" id="comentario" placeholder="Ingresa comentario" style="WIDTH: 228px; HEIGHT: 98px" size=32 required>
+                            <h1>&nbsp;</h1>
+                            <input type="submit" name="ComentarioCliente" class="btn btn-danger" value="Comentario">
+                        </form>
+                                        
+        </div>
+                                    </div>
          
 </body>
 </html>
