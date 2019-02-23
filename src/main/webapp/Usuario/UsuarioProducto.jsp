@@ -45,42 +45,42 @@ and open the template in the editor.
         </header>
         <div id="principal">
             <div class="row">
-                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 container-fluid"><!-- Seccion central (Visualizar tarea) -->
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 container-fluid" ><!-- Seccion derecha (Visualizar tarea) -->
+                    <div style="background-color: #EDEDED; margin: 5%;">
+                        <div style="margin: 5%;">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 container-fluid"><!-- Seccion central (Visualizar tarea) -->
                     <div style="background-color: #EDEDED; margin-left: 2.5%;">
                         <div style="margin: 2.5%;">
-                            <h5 align="center">Bitácora del cliente</h5>
+                            <h5 align="center">Productos</h5>
                             <br>
                             <table class="table">
                                 <thead class=" thead-light">
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Día</th>
+                                        <th scope="col">Producto</th>
+                                        <th scope="col">Proveedor</th>
                                         <th scope="col">Descripción</th>
-                                        <th scope="col">Atendio</th>
-                                        <th scope="col">Número</th>
+                                        <th scope="col">Precio</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>@mdo</td>
+                                        <td>Cable coaxial</td>
+                                        <td>Calbes CA CV</td>
+                                        <td>Calbe de 2m</td>
+                                        <td>$150</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>@twitter</td>
-                                        <td>@mdo</td>
+                                        <td>Router MB-878</td>
+                                        <td>CISCO</td>
+                                        <td>V2.5</td>
+                                        <td>$45,000</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -88,54 +88,15 @@ and open the template in the editor.
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 container-fluid" ><!-- Seccion derecha (Visualizar tarea) -->
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 container-fluid" ><!-- Seccion derecha (Visualizar tarea) -->
                     <div style="background-color: #EDEDED; margin: 5%;">
                         <div style="margin: 5%;">
-                            <h5 align="center">Buscar Cliente</h5>
-                            <form role="form" method="post" onsubmit="return BuscarCliente()">
-                                <div class="form-group">
-                                    <label for="idCliente">Id del Cliente:</label>
-                                    <input type="text" class="form-control" id="idCliente" name="idCliente" onkeypress="return SoloNumeros(event)">
-                                </div>         
-                                <button type="submit" class="btn btn-default">Buscar</button>
-                                <div class="form-group">
-                                    <br>
-                                </div>
-                            </form>
+                            
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 container-fluid"><!-- Seccion central (Visualizar tarea) -->
-                    <div style="background-color: #EDEDED; margin-left: 2.5%;">
-                        <div style="margin: 2.5%;">
-                            <h5 align="center">Comentario</h5>
-                            <br>
-                            <form role="form" method="post" action="#">
-                                <div class="row">
-                                    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 form-group">
-                                        <input type="text" class="form-control" id="comentarioCliente" name="comentarioCliente" required="required">
-                                    </div>     
-                                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-group">
-                                        <button type="submit" class="btn btn-success">Agregar</button>
-                                    </div>
-                                </div>
-                                
-                            </form>
-
-                            <br>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 container-fluid" ><!-- Seccion derecha (Visualizar tarea) -->
-                    <div style="background-color: #EDEDED; margin: 5%;">
-                        <div style="margin: 5%;">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
 
     </div> 
