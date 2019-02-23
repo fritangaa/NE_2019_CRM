@@ -17,8 +17,8 @@ and open the template in the editor.
         <script src="../Recursos/Bootstrap/include/popper.min.js" type="text/javascript"></script>
         <script src="../Gerencia/validaciones/validacion.js" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
-    <script src="../Recursos/js/validaciones.js" type="text/javascript"></script>
-    
+        <script src="../Recursos/js/validaciones.js" type="text/javascript"></script>
+
     </head>
     <body>
         <header class="sticky-top">
@@ -45,42 +45,62 @@ and open the template in the editor.
         </header>
         <div id="principal">
             <div class="row">
-                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 container-fluid"><!-- Seccion central (Visualizar tarea) -->
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 container-fluid" ><!-- Seccion derecha (Visualizar tarea) -->
+                    <div style="background-color: #EDEDED; margin: 5%;">
+                        <div style="margin: 5%;">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 container-fluid"><!-- Seccion central (Visualizar tarea) -->
                     <div style="background-color: #EDEDED; margin-left: 2.5%;">
                         <div style="margin: 2.5%;">
-                            <h5 align="center">Historial</h5>
+                            <br>
+                                <form>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                                            <h5>Productos</h5>
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+                                        </div>
+                                        <div class="form-group col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                                            <select name="Categoria"  class="form-control">
+                                                <option value="product">Producto</option>
+                                                <option value="prov">Proovedor</option>
+                                                <option value="desc">Descripción</option>
+                                                <option value="precio">Precio</option>
+                                            </select>
+                                        </div>  
+                                    </div>
+                                    
+                                </form>
+
                             <br>
                             <table class="table">
                                 <thead class=" thead-light">
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Día</th>
+                                        <th scope="col">Producto</th>
+                                        <th scope="col">Proveedor</th>
                                         <th scope="col">Descripción</th>
-                                        <th scope="col">Atendio</th>
-                                        <th scope="col">Número</th>
+                                        <th scope="col">Precio</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>@mdo</td>
+                                        <td>Cable coaxial</td>
+                                        <td>Calbes CA CV</td>
+                                        <td>Calbe de 2m</td>
+                                        <td>$150</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>@twitter</td>
-                                        <td>@mdo</td>
+                                        <td>Router MB-878</td>
+                                        <td>CISCO</td>
+                                        <td>V2.5</td>
+                                        <td>$45,000</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -88,23 +108,18 @@ and open the template in the editor.
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 container-fluid" ><!-- Seccion derecha (Visualizar tarea) -->
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 container-fluid" ><!-- Seccion derecha (Visualizar tarea) -->
                     <div style="background-color: #EDEDED; margin: 5%;">
                         <div style="margin: 5%;">
-                                <div class="form-group">
-                                    <label for="idCliente">Id:</label>
-                                    <input type="text" class="form-control" id="idCliente" name="idCliente" onkeypress="return SoloNumeros(event)" disabled="true">
-                                    <br>
-                                </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-            
+
         </div>
 
     </div> 
 </div>
 </body>
 </html>
-

@@ -35,10 +35,10 @@ and open the template in the editor.
                             <a href="../Cliente/ClienteInicio.jsp" class="nav-link text-white" id="Inicio"  aria-haspopup="true" aria-expanded="false"><h5>Inicio</h5></a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white" id="Bitacora"  aria-haspopup="true" aria-expanded="false"><h5>Productos</h5></a>
+                            <a href="../Cliente/ClienteProducto.jsp"class="nav-link text-white" id="Bitacora"  aria-haspopup="true" aria-expanded="false"><h5>Productos</h5></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" id="Informe"  aria-haspopup="true" aria-expanded="false"><h5>Pago</h5></a>
+                            <a href="../Cliente/ClientePago.jsp" class="nav-link text-white" id="Informe"  aria-haspopup="true" aria-expanded="false"><h5>Pago</h5></a>
                         </li>
                     </ul>   
                 </div>
