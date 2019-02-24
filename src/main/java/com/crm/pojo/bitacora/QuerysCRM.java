@@ -43,14 +43,14 @@ public class QuerysCRM {
                  openDB();
                   PreparedStatement ps;
                     if (parametro != null) {
-                                                    ps = conn.prepareStatement("select id_bu, fecha, actividad, idusuario from bitacora_de_usuarios where idusuario='"+parametro+"' ;");
+                                                    ps = conn.prepareStatement("select id_bc, fecha, actividad, idcliente, idusuario from bitacora_de_clientes where idcliente='"+parametro+"' ;");
                                                     ResultSet rs= ps.executeQuery();
                                                       System.out.println(ps);
                     
                     closeDB();
                   return rs;
          }else {
-                     ps = conn.prepareStatement("select * from bitacora_de_usuarios"
+                     ps = conn.prepareStatement("select * from bitacora_de_clientes"
                                                    );
                                                     ResultSet rs= ps.executeQuery();
                                                       System.out.println(ps);
@@ -63,6 +63,28 @@ public class QuerysCRM {
                     
           
                   
+        }
+    
+    public boolean agregarComentario(String idusuario, String idcliente, String fecha, String actividad) throws SQLException, ClassNotFoundException{
+         boolean agregado=false;
+         
+                 openDB();
+                 try{
+                 if(conn!=null){
+                         PreparedStatement ps;
+                    
+                     ps = conn.prepareStatement("INSERT INTO bitacora_de_clientes(fecha, actividad, idcliente, idusuario) "
+                                       + " VALUES ('"+fecha+"','"+actividad+"','"+idcliente+"','"+idusuario+"');");
+                    ResultSet rs= ps.executeQuery();
+                     agregado=true;
+                    }
+                          
+                    closeDB();
+                      } catch (SQLException e) {
+                        agregado=false;
+                        e.printStackTrace();
+                    }
+                return agregado; 
         }
     
 }
