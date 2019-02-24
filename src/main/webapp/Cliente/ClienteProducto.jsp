@@ -63,7 +63,7 @@ and open the template in the editor.
                             <br>
                             <h5 align="center">Productos</h5>
                             <br>
-                            <form>
+                           
                                 <div class="row">
                                     <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
                                         <div class="container h-100">
@@ -101,29 +101,22 @@ and open the template in the editor.
                                         <%
                                             LinkedList<ProductoCliente> lista = ClienteDB.consultaProducto();
                                             for (int i = 0; i < lista.size(); i++) {
+                                                out.println("<form role='form' method='post' action='../CompraCliente'>");
                                                 out.println("<tr>");
-                                                out.println("<th scope='row'>" + lista.get(i).getIdProducto()+ "</th>");
+                                                out.println("<th scope='row'><input type='number' name='idproducto' min='0' max='100' id='idproducto' value='"+lista.get(i).getIdProducto() +"'></th>");
                                                 out.println("<td>" + lista.get(i).getNombre() + "</td>");
-                                                out.println("<td>" + lista.get(i).getProveedor()+ "</td>");
+                                                out.println("<td>" + lista.get(i).getProveedor() + "</td>");
                                                 out.println("<td></td>");
-                                                out.println("<td>$" + lista.get(i).getPrecio()+ "</td>");
-                                                out.println("<td><input type='number' name='cantidad' min='0' max='100'></></td>");
+                                                out.println("<td>$<input type='number' name='precio' min='0' max='10000' id='precio' value='"+lista.get(i).getPrecio() +"'  ></td>");
+                                                out.println("<td><input type='number' name='cantidad' min='0' max='100' id='cantidad' value='0'></></td>");
+                                                out.println("<td><button type='submit' class='button'>Comprar</button></td>");
                                                 out.println("</tr>");
+                                                out.println("</form>");
                                             }
                                         %>
-                                        <tr>
-                                            <th scope="row">30</th>
-                                            <td>Router MB-878</td>
-                                            <td>CISCO</td>
-                                            <td>V2.5</td>
-                                            <td>$45,000</td>
-                                            <td><input type="number" name="cantidad" min="0" max="100"></></td>
-                                        </tr>
                                     </tbody>
                                 </table>
                                 <br>
-                                <button type="submit" class="button">Comprar ahora</button>
-                            </form>
                             <br>
                         </div>
                     </div>

@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -47,5 +48,20 @@ public class ClienteDB {
             }                    
         conn.close();
         return l;
+    }
+     
+     public void generarCompra(String campos, String tabla, String valores) throws SQLException, ClassNotFoundException {
+        Connection conn;
+        Class.forName("org.postgresql.Driver");
+        Properties connProp = new Properties();
+        connProp.put("user", "postgres");
+        connProp.put("password", "root");
+        
+        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/CRM", connProp);
+        
+        PreparedStatement ps;
+        ps=conn.prepareStatement("INSERT INTO "+tabla+" ("+campos+") VALUES ("+valores+")");
+       ps.execute();
+        conn.close();
     }
 }
