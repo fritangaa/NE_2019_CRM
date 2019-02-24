@@ -1,3 +1,6 @@
+<%@page import="com.crm.clases.cliente.ProductoCliente"%>
+<%@page import="com.crm.pojo.cliente.ClienteDB"%>
+<%@page import="java.util.LinkedList"%>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -95,16 +98,21 @@ and open the template in the editor.
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <%
+                                            LinkedList<ProductoCliente> lista = ClienteDB.consultaProducto();
+                                            for (int i = 0; i < lista.size(); i++) {
+                                                out.println("<tr>");
+                                                out.println("<th scope='row'>" + lista.get(i).getIdProducto()+ "</th>");
+                                                out.println("<td>" + lista.get(i).getNombre() + "</td>");
+                                                out.println("<td>" + lista.get(i).getProveedor()+ "</td>");
+                                                out.println("<td></td>");
+                                                out.println("<td>$" + lista.get(i).getPrecio()+ "</td>");
+                                                out.println("<td><input type='number' name='cantidad' min='0' max='100'></></td>");
+                                                out.println("</tr>");
+                                            }
+                                        %>
                                         <tr>
-                                            <th scope="row">1</th>
-                                            <td>Cable coaxial</td>
-                                            <td>Calbes CA CV</td>
-                                            <td>Calbe de 2m</td>
-                                            <td>$150</td>
-                                            <td><input type="number" name="cantidad" min="0" max="100"></></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
+                                            <th scope="row">30</th>
                                             <td>Router MB-878</td>
                                             <td>CISCO</td>
                                             <td>V2.5</td>
