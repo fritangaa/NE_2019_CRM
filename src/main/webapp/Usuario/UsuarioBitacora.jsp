@@ -72,6 +72,7 @@ and open the template in the editor.
                                             <th scope="col">ID bitacora</th>
                                             <th scope="col">Fecha</th>
                                             <th scope="col">Actividad</th>
+                                            <th scope="col">ID cliente</th>
                                             <th scope="col">ID usuario</th>
                                             
                                         </tr>
@@ -91,6 +92,7 @@ and open the template in the editor.
                                             <td><%=rsTabla.getString(2)%></td>
                                             <td><%=rsTabla.getString(3)%></td>
                                             <td><%=rsTabla.getString(4)%></td>
+                                            <td><%=rsTabla.getString(5)%></td>
                                             
                                       
                                         </tr>
@@ -101,21 +103,27 @@ and open the template in the editor.
                         </table>
                     </div>
                 </div>
-            </div>
-        </div>
                                     
                                     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
         <div>
             
-            <form action="" method="GET">
+            <form action="../../../Comentario" method="POST">
                             <span><span>2&nbsp;&nbsp;</span>Ingresar Comentario</span><br><br>
-                            <input type="text" name="comentario" id="comentario" placeholder="Ingresa comentario" style="WIDTH: 228px; HEIGHT: 98px" size=32 required>
+                            <input type="text" name="idusuario" id="idusuario" placeholder="Ingresa tu id" style="WIDTH: 228px;" required>
+                            <input type="text" name="idcliente" id="idcliente" placeholder="Ingresa el id del cliente" style="WIDTH: 228px;" required>
+                            <input type="text" name="fecha" id="fecha" placeholder="Ingresa la fecha" style="WIDTH: 228px;" required>
+                            <input type="text" name="actividad" id="comentario" placeholder="Ingresa comentario" style="WIDTH: 228px; HEIGHT: 98px" size=32 required>
                             <h1>&nbsp;</h1>
-                            <input type="submit" name="ComentarioCliente" class="btn btn-danger" value="Comentario">
+                            <input type="submit" name="agregar" class="btn btn-danger" style="WIDTH: 228px;" value="Agregar">
                         </form>
                                         
         </div>
                                     </div>
+                                    
+            </div>
+        </div>
+                                    
+                                    
          
 </body>
 </html>
