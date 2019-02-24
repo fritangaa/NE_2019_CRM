@@ -45,7 +45,7 @@ and open the template in the editor.
                 <a class="navbar-brand text-white" href="#"><h5>Nombre de Cliente</h5></a>
             </nav>
         </header>
-        <div id="principal">
+        <div id="principal" >
             <div class="row">
                 <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 container-fluid" ><!-- Seccion derecha (Visualizar tarea) -->
                     <div style="background-color: #EDEDED; margin: 5%;">
@@ -55,7 +55,7 @@ and open the template in the editor.
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 container-fluid"><!-- Seccion central (Visualizar tarea) -->
-                    <div style="background-color: #EDEDED; margin-left: 2.5%;">
+                    <div margin-left: 2.5%;">
                         <div style="margin: 2.5%;">
                             <h5 align="center">Método de pago</h5>
 
