@@ -48,3 +48,15 @@ function SoloNumeros(evt){
 }
 
 
+function categoria(){
+
+    var categoria=document.getElementById("Categoriaa").selectedIndex;
+         if( categoria == null || categoria==0 && buscar == null || buscar==0) {
+              alert("ingrese lo que desea buscar");
+            return false;
+          }
+          
+          
+          
+     
+}

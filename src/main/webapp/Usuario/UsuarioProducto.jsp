@@ -61,14 +61,14 @@ and open the template in the editor.
                                  <div class="container h-100">
                                 <div class="d-flex justify-content-center h-100">
                                     <div class="searchbar">
-                                        <input class="search_input" type="text" name="" placeholder="Buscar...">
-                                        <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+                                        <input class="search_input" type="text" id="buscar" name="" placeholder="Buscar...">
+                                        <a href="#" class="search_icon" onkeyup="return categoria()"><i class="fas fa-search"></i></a>
                                     </div>
                                 </div>
                             </div>
                             </div>
                             <br>
-                            <form>
+                            <form onsubmit="return categoria()">
                                 <div class="row">
                                     <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                                         <h5>Productos</h5>
@@ -77,7 +77,7 @@ and open the template in the editor.
 
                                     </div>
                                     <div class="form-group col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                        <select name="Categoria"  class="form-control">
+                                        <select name="Categoria" id="Categoriaa" class="form-control" >
                                             <option value="product">Producto</option>
                                             <option value="prov">Proovedor</option>
                                             <option value="desc">Descripción</option>
