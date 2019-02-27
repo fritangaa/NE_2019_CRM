@@ -55,8 +55,52 @@ function categoria(){
               alert("ingrese lo que desea buscar");
             return false;
           }
-          
-          
-          
-     
+                    
+             
+}
+
+function soloLetras(e){//Se utiliza para que el campo de texto solo acepte letras
+       key = e.keyCode || e.which;
+       tecla = String.fromCharCode(key).toLowerCase();
+       letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";//Se define todo el abecedario que se quiere que se muestre
+       especiales = "8-37-39-46";
+
+       tecla_especial = false
+       for(var i in especiales){
+            if(key == especiales[i]){
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if(letras.indexOf(tecla)==-1 && !tecla_especial){
+            return false;
+        }
+    }
+    
+    
+    
+    function ClientePago(){
+ var hoy=new Date();
+    var nombre=document.getElementById("nombre").value;
+  var tarjeta=document.getElementById("tarjeta").value;
+ var fecha=document.getElementById("fecha1").value;
+    
+ if(nombre == "" || nombre== null || nombre.length == 0 ) 
+       {
+        alert("ingrese su nombre");
+        return false;
+    }
+    
+    if (tarjeta.length<16  || tarjeta.length>16){
+        alert("ingrese un numero de tarjeta de 16 digitos valido")
+     return false;   
+    }
+    
+     if(fecha>hoy){
+        alert("la fecha  inicial no puede ser mayor ala fecha actual");
+        return false;
+    }
+
+
 }

@@ -62,24 +62,23 @@ and open the template in the editor.
                             <div class="modal">
                                 <div class="modal__container">
                                     <div class="modal__content">
-                                        <form>
+                                        <form onsubmit="return ClientePago()">
                                             <ul class="form-list">
                                                 <li class="form-list__row">
                                                     <label>Nombre</label>
-                                                    <input type="text" name="" required="" />
+                                                    <input type="text" id="nombre" name="" onkeypress="return soloLetras(event)" />
                                                 </li>
                                                 <li class="form-list__row">
                                                     <label>Número de tarjeta</label>
                                                     <div id="input--cc" class="creditcard-icon">
-                                                        <input type="text" name="cc_number" required="" maxlength="16"/>
+                                                        <input type="text" id="tarjeta" name="cc_number" required="" maxlength="16" onkeypress="return SoloNumeros(event)"/>
                                                     </div>
                                                 </li>
                                                 <li class="form-list__row form-list__row--inline">
                                                     <div>
                                                         <label>Fecha de expiración</label>
                                                         <div class="form-list__input-inline">
-                                                            <input type="text" name="cc_month" placeholder="MM"  minlength="2" maxlength="2" required="" />
-                                                            <input type="text" name="cc_year" placeholder="YY"  minlength="2" maxlength="2" required="" />
+                                                            <input id="fecha1" type="date" class="form-control"/>
                                                         </div>
                                                     </div>
                                                     <div>
