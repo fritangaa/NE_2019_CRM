@@ -51,7 +51,7 @@ function SoloNumeros(evt){
 function categoria(){
 
     var categoria=document.getElementById("Categoriaa").selectedIndex;
-         if( categoria == null || categoria==0 && buscar == null || buscar==0) {
+         if( categoria == null || categoria==0) {
               alert("ingrese lo que desea buscar");
             return false;
           }
@@ -85,6 +85,7 @@ function soloLetras(e){//Se utiliza para que el campo de texto solo acepte letra
     var nombre=document.getElementById("nombre").value;
   var tarjeta=document.getElementById("tarjeta").value;
  var fecha=document.getElementById("fecha1").value;
+ var cvc=document.getElementById("cvc").value;
     
  if(nombre == "" || nombre== null || nombre.length == 0 ) 
        {
@@ -98,9 +99,13 @@ function soloLetras(e){//Se utiliza para que el campo de texto solo acepte letra
     }
     
      if(fecha>hoy){
-        alert("la fecha  inicial no puede ser mayor ala fecha actual");
+        alert("la fecha  no puede ser mayor ala fecha actual");
         return false;
     }
 
+ if (cvc.length<3  || cvc.length>3){
+        alert("ingrese un numero de 3 digitos valido")
+     return false;   
+    }
 
 }

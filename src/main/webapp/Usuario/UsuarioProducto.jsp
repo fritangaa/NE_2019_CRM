@@ -68,7 +68,7 @@ and open the template in the editor.
                             </div>
                             </div>
                             <br>
-                            <form onsubmit="return categoria()">
+                            <form >
                                 <div class="row">
                                     <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                                         <h5>Productos</h5>
@@ -78,6 +78,7 @@ and open the template in the editor.
                                     </div>
                                     <div class="form-group col-lg-2 col-md-2 col-sm-12 col-xs-12">
                                         <select name="Categoria" id="Categoriaa" class="form-control" >
+                                            <option value="0">Seleccione Una opccion</option>
                                             <option value="product">Producto</option>
                                             <option value="prov">Proovedor</option>
                                             <option value="desc">Descripción</option>
@@ -85,6 +86,9 @@ and open the template in the editor.
                                         </select>
                                     </div>  
                                 </div>
+                                 <li>
+                                     <button type="button" class="button" onclick="return categoria()">Buscar</button>
+                                                </li>
 
                             </form>
                             <br>

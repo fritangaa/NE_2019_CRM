@@ -71,7 +71,7 @@ and open the template in the editor.
                                                 <li class="form-list__row">
                                                     <label>Número de tarjeta</label>
                                                     <div id="input--cc" class="creditcard-icon">
-                                                        <input type="text" id="tarjeta" name="cc_number" required="" maxlength="16" onkeypress="return SoloNumeros(event)"/>
+                                                        <input type="text" id="tarjeta" name="cc_number"  maxlength="16" onkeypress="return SoloNumeros(event)"/>
                                                     </div>
                                                 </li>
                                                 <li class="form-list__row form-list__row--inline">
@@ -85,7 +85,7 @@ and open the template in the editor.
                                                         <label>
                                                             CVC
                                                         </label>
-                                                        <input type="text" name="cc_cvc" placeholder="123" minlength="3" maxlength="3" required="" />
+                                                        <input type="text" name="cc_cvc" placeholder="123"  id="cvc" onkeypress="return SoloNumeros(event)" />
                                                     </div>
                                                 </li>
                                                 <li>
