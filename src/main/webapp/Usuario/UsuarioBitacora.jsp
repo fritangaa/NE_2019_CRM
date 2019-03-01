@@ -45,7 +45,11 @@ and open the template in the editor.
             </nav>
         </header>
         
+        <div id="principal">
         <div class="container-fluid">
+            <div class="row">
+                <br>
+            </div>
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                     <div>
@@ -104,24 +108,36 @@ and open the template in the editor.
                     </div>
                 </div>
                                     
-                                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-        <div>
-            
-            <form action="../../../Comentario" method="POST">
-                            <span><span>2&nbsp;&nbsp;</span>Ingresar Comentario</span><br><br>
-                            <input type="text" name="idusuario" id="idusuario" placeholder="Ingresa tu id" style="WIDTH: 228px;" required>
-                            <input type="text" name="idcliente" id="idcliente" placeholder="Ingresa el id del cliente" style="WIDTH: 228px;" required>
-                            <input type="text" name="fecha" id="fecha" placeholder="Ingresa la fecha" style="WIDTH: 228px;" required>
-                            <input type="text" name="actividad" id="comentario" placeholder="Ingresa comentario" style="WIDTH: 228px; HEIGHT: 98px" size=32 required>
-                            <h1>&nbsp;</h1>
-                            <input type="submit" name="agregar" class="btn btn-danger" style="WIDTH: 228px;" value="Agregar">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 form-style-5"><!-- Seccion derecha -->
+                        <form method="POST" action="../../Comentario" onsubmit="return">
+                            
+                            <div class="form-group">
+
+                            <span><span></span>Agregar<br>nuevo proveedor</span><br>
+                            <br>
+                            <label for="idbitacora">Ingrese ID bitacora</label>
+                            <input class="form-control" type="text" name="idbitacora" id="idbitacora" placeholder="Ingresa id bitacora" style="WIDTH: 228px;" required>
+                            <label for="idusuario">Ingresar tu ID</label>
+                            <input class="form-control" type="text" name="idusuario" id="idusuario" placeholder="Ingresa tu id" style="WIDTH: 228px;" required>
+                            <label for="idcliente">Ingresa el ID del cliente</label>
+                            <input class="form-control" type="text" name="idcliente" id="idcliente" placeholder="Ingresa el id del cliente" style="WIDTH: 228px;" required>
+                            <label for="fecha">Ingresa la fecha</label>
+                            <input class="form-control" type="text" name="fecha" id="fecha" placeholder="Ingresa la fecha" style="WIDTH: 228px;" required>
+                            <label for="actividad">Ingresa la actividad</label>
+                            <textarea class="form-control" rows="5" name="actividad" id="comentario" placeholder="Ingresa comentario" required> </textarea><br>
+                            <br>
+                            <input type="submit" value="Agregar" name="nuevo" class="btn btn-danger"> 
+                            
+                            </div>
+
                         </form>
-                                        
-        </div>
-                                    </div>
-                                    
+            
             </div>
         </div>
+        </div>
+                                    
+        </div>
+        
                                     
                                     
          

@@ -65,7 +65,7 @@ public class QuerysCRM {
                   
         }
     
-    public boolean agregarComentario(String idusuario, String idcliente, String fecha, String actividad) throws SQLException, ClassNotFoundException{
+    public boolean agregarComentario(String idbitacora, String idusuario, String idcliente, String fecha, String actividad) throws SQLException, ClassNotFoundException{
          boolean agregado=false;
          
                  openDB();
@@ -73,8 +73,8 @@ public class QuerysCRM {
                  if(conn!=null){
                          PreparedStatement ps;
                     
-                     ps = conn.prepareStatement("INSERT INTO bitacora_de_clientes(fecha, actividad, idcliente, idusuario) "
-                                       + " VALUES ('"+fecha+"','"+actividad+"','"+idcliente+"','"+idusuario+"');");
+                     ps = conn.prepareStatement("INSERT INTO bitacora_de_clientes(id_bc, fecha, actividad, idcliente, idusuario) "
+                                       + " VALUES ('"+idbitacora+"','"+fecha+"','"+actividad+"',"+idcliente+","+idusuario+");");
                     ResultSet rs= ps.executeQuery();
                      agregado=true;
                     }

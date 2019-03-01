@@ -39,12 +39,13 @@ public class Comentario extends HttpServlet {
         
         QuerysCRM nuevo = new QuerysCRM();
         
-        String usuario = request.getParameter("idusuario");
-        String cliente = request.getParameter("idcliente");
+        String idbitacora = request.getParameter("idbitacora");
+        String idusuario = request.getParameter("idusuario");
+        String idcliente = request.getParameter("idcliente");
         String fecha = request.getParameter("fecha");
         String actividad = request.getParameter("actividad");
         
-        nuevo.agregarComentario(usuario, cliente, fecha, actividad);
+        nuevo.agregarComentario(idbitacora, fecha, actividad, idcliente, idusuario);
         
         PrintWriter out=response.getWriter();
             out.println("<script>");
