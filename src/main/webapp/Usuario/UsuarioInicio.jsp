@@ -1,3 +1,5 @@
+<%@page import="java.sql.ResultSet"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -50,19 +52,19 @@ and open the template in the editor.
                         <div style="margin: 5%;">
                             <div class="form-group">
                                 <label for="nomCliente">Nombre del cliente</label>
-                                <input type="text" id="nomCliente" name="nomCliente" class="form-control" disabled>  
+                                <input type="text" value="<c:out value="${nombre}"/>" id="nomCliente" name="nomCliente" class="form-control" disabled>  
                             </div>                         
                             <div class="form-group">
                                 <label for="dirCliente">Dirección</label>
-                                <input type="text" id="dirCliente" name="dirCliente" class="form-control" disabled>  
+                                <input type="text" value="<c:out value="${direccion}"/>" id="dirCliente" name="dirCliente" class="form-control" disabled>  
                             </div>
                             <div class="form-group">
                                 <label for="codigoCliente">Código postal</label>
-                                <input type="text" class="form-control" id="codigoCliente" name="codigoCliente" disabled>
+                                <input type="text" value="<c:out value="${codigo}"/>" class="form-control" id="codigoCliente" name="codigoCliente" disabled>
                             </div>
                             <div class="form-group">
                                 <label for="correoCliente">Correo</label>
-                                <input type="text" class="form-control" id="correoCliente" name="correoCliente" disabled>
+                                <input type="text" value="<c:out value="${correo}"/>" class="form-control" id="correoCliente" name="correoCliente" disabled>
                             </div>
                             <div class="form-group">
                                 <br>
@@ -85,26 +87,27 @@ and open the template in the editor.
                                         <th scope="col">Handle</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>@twitter</td>
-                                    </tr>
-                                </tbody>
+                                 <jsp:useBean id="interTabla" scope="page" class="com.crm.pojo.bitacora.QuerysCRM"/>
+                                    <%
+                                        String parametro = request.getParameter("idcliente");
+                                        ResultSet rsTabla = interTabla.consultaGeneral(parametro);
+                                    %>
+                                    <tbody>
+                                        <%
+                                            while (rsTabla.next()) {
+                                        %>
+                                        <tr id="modalInter">
+                                            <td><%=rsTabla.getString(1)%></td>
+                                            <td><%=rsTabla.getString(2)%></td>
+                                            <td><%=rsTabla.getString(3)%></td>
+                                            <td><%=rsTabla.getString(4)%></td>
+                                            
+                                      
+                                        </tr>
+                                        <%
+                                            }
+                                        %>
+                                    </tbody>
                             </table>
                             <br>
                         </div>
