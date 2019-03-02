@@ -45,12 +45,7 @@ public class UsuarioInicio extends HttpServlet {
         String idcliente = request.getParameter("idCliente");
         
         c.consulta(idcliente);  
-        
-        usu.setNombre_usu(idcliente);
-        usu.setCp_usu(idcliente);
-        usu.setDireccion_usu(idcliente);
-        usu.setEmail_usu(idcliente);
-        
+                
         request.setAttribute("nombre", usu.getNombre_usu());
         request.setAttribute("direccion", usu.getDireccion_usu());
         request.setAttribute("codigo", usu.getCp_usu());

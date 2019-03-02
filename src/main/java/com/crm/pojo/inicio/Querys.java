@@ -14,6 +14,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Properties;
 import com.crm.db.Conexion;
+import java.util.LinkedList;
 
 /**
  *
@@ -38,16 +39,27 @@ public class Querys {
         conn.close();
     }
     
-    public ResultSet consulta(String parametro) throws SQLException, ClassNotFoundException{
+    public LinkedList consulta(String parametro) throws SQLException, ClassNotFoundException{
          
                  openDB();
+                 LinkedList <UsuarioBean> l=new LinkedList<UsuarioBean>();
                   PreparedStatement ps;
                     ps = conn.prepareStatement("select * from cliente WHERE id_cliente="+ parametro);
                     ResultSet rs= ps.executeQuery();
                     System.out.println(ps);
+                    
+                     while (rs.next()) {
+                        UsuarioBean usu=new UsuarioBean();
+                        usu.setNombre_usu(rs.getString("nombre"));
+                        usu.setCp_usu(rs.getString("cp"));
+                        usu.setDireccion_usu(rs.getString("direccion"));
+                        usu.setEmail_usu(rs.getString("email"));  
+                        
+                        l.add(usu);
+                    }
                     closeDB();
                   
-        return rs;      
+        return l;      
                   
         }
     
