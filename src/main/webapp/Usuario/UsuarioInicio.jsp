@@ -87,7 +87,7 @@ and open the template in the editor.
                                         <th scope="col">Handle</th>
                                     </tr>
                                 </thead>
-                                 <jsp:useBean id="interTabla" scope="page" class="com.crm.pojo.bitacora.QuerysCRM"/>
+                                 <jsp:useBean id="interTabla" scope="page" class="com.crm.pojo.inicio.Querys"/>
                                     <%
                                         String parametro = request.getParameter("idcliente");
                                         ResultSet rsTabla = interTabla.consultaGeneral(parametro);

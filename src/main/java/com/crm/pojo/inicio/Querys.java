@@ -62,6 +62,20 @@ public class Querys {
         return l;      
                   
         }
+     public ResultSet consultaGeneral(String parametro) throws SQLException, ClassNotFoundException{
+         
+                 openDB();
+                  PreparedStatement ps;
+              
+                     ps = conn.prepareStatement("select * from cliente");
+                                                    ResultSet rs= ps.executeQuery();
+                                                      System.out.println(ps);
+                    
+                                                       closeDB();
+                  return rs;
+               
+        }
+    
     
     
 }
