@@ -5,8 +5,14 @@
  */
 package com.crm.servlet.usuInicio;
 
+
+import com.crm.pojo.inicio.Querys;
+import com.crm.pojo.inicio.UsuarioBean;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -30,20 +36,31 @@ public class UsuarioInicio extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, ClassNotFoundException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet UsuarioInicio</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet UsuarioInicio at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+         
+        Querys c = new Querys(); 
+        UsuarioBean usu= new UsuarioBean ();
+        
+        String idcliente = request.getParameter("idCliente");
+        
+        c.consulta(idcliente);  
+        
+        usu.setNombre_usu(idcliente);
+        usu.setCp_usu(idcliente);
+        usu.setDireccion_usu(idcliente);
+        usu.setEmail_usu(idcliente);
+        
+        request.setAttribute("nombre", usu.getNombre_usu());
+        request.setAttribute("direccion", usu.getDireccion_usu());
+        request.setAttribute("codigo", usu.getCp_usu());
+        request.setAttribute("correo", usu.getEmail_usu());
+        
+        request.getRequestDispatcher("../UsuarioInicio.jsp").forward(request, response);
+        
+        //response.sendRedirect("Usuario/UsuarioInicio.jsp"); 
+
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -58,7 +75,13 @@ public class UsuarioInicio extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(UsuarioInicio.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(UsuarioInicio.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -72,7 +95,13 @@ public class UsuarioInicio extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(UsuarioInicio.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(UsuarioInicio.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
