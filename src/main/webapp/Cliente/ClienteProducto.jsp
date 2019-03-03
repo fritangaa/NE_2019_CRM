@@ -63,60 +63,38 @@ and open the template in the editor.
                             <br>
                             <h5 align="center">Productos</h5>
                             <br>
-                           
-                                <div class="row">
-                                    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-                                        <div class="container h-100">
-                                            <div class="d-flex justify-content-center h-100">
-                                                <div class="searchbar">
-                                                    <input class="search_input" type="text" name="" placeholder="Buscar...">
-                                                    <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                        <br>
-                                        <select name="Categoria"  class="form-control">
-                                            <option value="product">Producto</option>
-                                            <option value="prov">Proovedor</option>
-                                            <option value="desc">Descripción</option>
-                                            <option value="precio">Precio</option>
-                                        </select>
-                                    </div>  
-                                </div>
-                                <br>
-                                <table class="table">
-                                    <thead class=" thead-light">
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Producto</th>
-                                            <th scope="col">Proveedor</th>
-                                            <th scope="col">Descripción</th>
-                                            <th scope="col">Precio</th>
-                                            <th scope="col">Cantidad</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <%
-                                            LinkedList<ProductoCliente> lista = ClienteDB.consultaProducto();
-                                            for (int i = 0; i < lista.size(); i++) {
-                                                out.println("<form role='form' method='post' action='../CompraCliente'>");
-                                                out.println("<tr>");
-                                                out.println("<th scope='row'><input type='number' name='idproducto' min='0' max='100' id='idproducto' value='"+lista.get(i).getIdProducto() +"'></th>");
-                                                out.println("<td>" + lista.get(i).getNombre() + "</td>");
-                                                out.println("<td>" + lista.get(i).getProveedor() + "</td>");
-                                                out.println("<td></td>");
-                                                out.println("<td>$<input type='number' name='precio' min='0' max='10000' id='precio' value='"+lista.get(i).getPrecio() +"'  ></td>");
-                                                out.println("<td><input type='number' name='cantidad' min='0' max='100' id='cantidad' value='0'></></td>");
-                                                out.println("<td><button type='submit' class='button'>Comprar</button></td>");
-                                                out.println("</tr>");
-                                                out.println("</form>");
-                                            }
-                                        %>
-                                    </tbody>
-                                </table>
-                                <br>
+                            <table class="table">
+                                <thead class=" thead-light">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Producto</th>
+                                        <th scope="col">Proveedor</th>
+                                        <th scope="col">Descripción</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Cantidad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <%
+                                        //request.getAttribute("consulta");
+                                        LinkedList<ProductoCliente> lista = ClienteDB.consultaProducto();
+                                        for (int i = 0; i < lista.size(); i++) {
+                                            out.println("<form role='form' method='post' action='../CompraCliente'>");
+                                            out.println("<tr>");
+                                            out.println("<th scope='row'><input type='number' name='idproducto' min='0' max='100' id='idproducto' value='" + lista.get(i).getIdProducto() + "'></th>");
+                                            out.println("<td>" + lista.get(i).getNombre() + "</td>");
+                                            out.println("<td>" + lista.get(i).getProveedor() + "</td>");
+                                            out.println("<td></td>");
+                                            out.println("<td>$<input type='number' name='precio' min='0' max='10000' id='precio' value='" + lista.get(i).getPrecio() + "'  ></td>");
+                                            out.println("<td><input type='number' name='cantidad' min='0' max='100' id='cantidad' value='0'></></td>");
+                                            out.println("<td><button type='submit' class='button'>Comprar</button></td>");
+                                            out.println("</tr>");
+                                            out.println("</form>");
+                                        }
+                                    %>
+                                </tbody>
+                            </table>
+                            <br>
                             <br>
                         </div>
                     </div>

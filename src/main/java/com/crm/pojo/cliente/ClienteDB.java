@@ -64,4 +64,28 @@ public class ClienteDB {
        ps.execute();
         conn.close();
     }
+     
+     public LinkedList consultaProductoEspecifico(String producto) throws SQLException, ClassNotFoundException {        
+        Connection conn;
+        Class.forName("org.postgresql.Driver");
+        LinkedList <ProductoCliente> l=new LinkedList<ProductoCliente>();
+        Properties connProp = new Properties();
+        connProp.put("user", "postgres");
+        connProp.put("password", "root");
+        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/CRM", connProp);
+        Statement stmt;        
+        stmt = conn.createStatement();
+        ResultSet rs = stmt.executeQuery("SELECT * FROM producto where nombre='"+producto+"'");
+            while (rs.next()) {
+                ProductoCliente pc=new ProductoCliente();
+                pc.setIdProducto(rs.getInt("id_producto"));
+                pc.setNombre(rs.getString("nombre"));
+                pc.setCategoria(rs.getString("categoria"));                
+                pc.setPrecio(rs.getString("precio_unitario"));
+                pc.setProveedor(rs.getString("idproveedor"));          
+                l.add(pc);
+            }                    
+        conn.close();
+        return l;
+    }
 }
