@@ -44,7 +44,7 @@ public class Querys {
                  openDB();
                  LinkedList <UsuarioBean> l=new LinkedList<UsuarioBean>();
                   PreparedStatement ps;
-                    ps = conn.prepareStatement("select * from cliente WHERE id_cliente="+ parametro);
+                    ps = conn.prepareStatement("select * from cliente WHERE id_cliente='"+ parametro + "' limit 10;");
                     ResultSet rs= ps.executeQuery();
                     System.out.println(ps);
                     
@@ -67,7 +67,7 @@ public class Querys {
                  openDB();
                   PreparedStatement ps;
               
-                     ps = conn.prepareStatement("select * from cliente");
+                     ps = conn.prepareStatement("select * from cliente limit 10");
                                                     ResultSet rs= ps.executeQuery();
                                                       System.out.println(ps);
                     

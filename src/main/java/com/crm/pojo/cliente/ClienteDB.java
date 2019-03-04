@@ -36,7 +36,7 @@ public class ClienteDB {
         conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/CRM", connProp);
         Statement stmt;        
         stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT * FROM producto");
+        ResultSet rs = stmt.executeQuery("SELECT * FROM producto limit 10");
             while (rs.next()) {
                 ProductoCliente pc=new ProductoCliente();
                 pc.setIdProducto(rs.getInt("id_producto"));
@@ -75,7 +75,7 @@ public class ClienteDB {
         conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/CRM", connProp);
         Statement stmt;        
         stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT * FROM producto where nombre='"+producto+"'");
+        ResultSet rs = stmt.executeQuery("SELECT * FROM producto where nombre='"+producto+"' limit 10");
             while (rs.next()) {
                 ProductoCliente pc=new ProductoCliente();
                 pc.setIdProducto(rs.getInt("id_producto"));
