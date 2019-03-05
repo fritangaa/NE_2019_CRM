@@ -85,8 +85,8 @@ and open the template in the editor.
                                             out.println("<td>" + lista.get(i).getNombre() + "</td>");
                                             out.println("<td>" + lista.get(i).getProveedor() + "</td>");
                                             out.println("<td></td>");
-                                            out.println("<td>$<input type='number' name='precio' min='0' max='10000' id='precio' value='" + lista.get(i).getPrecio() + "'  ></td>");
-                                            out.println("<td><input type='number' name='cantidad' min='0' max='100' id='cantidad' value='0'></></td>");
+                                            out.println("<td>$<input type='number' name='precio' min='0' max='10000' id='precio' required value='" + lista.get(i).getPrecio() + "'  ></td>");
+                                            out.println("<td><input type='number' name='cantidad' min='0' max='100' id='cantidad' value='0' required></></td>");
                                             out.println("<td><button type='submit' class='button'>Comprar</button></td>");
                                             out.println("</tr>");
                                             out.println("</form>");
@@ -99,7 +99,7 @@ and open the template in the editor.
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 container-fluid" ><!-- Seccion derecha (Visualizar tarea) -->
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 container-fluid"  ><!-- Seccion derecha (Visualizar tarea) -->
                     <div style="background-color: #EDEDED; margin: 5%;">
                         <div style="margin: 5%;">
 
