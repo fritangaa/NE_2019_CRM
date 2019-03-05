@@ -76,7 +76,6 @@ and open the template in the editor.
                                 </thead>
                                 <tbody>
                                     <%
-                                        //request.getAttribute("consulta");
                                         LinkedList<ProductoCliente> lista = ClienteDB.consultaProducto();
                                         for (int i = 0; i < lista.size(); i++) {
                                             out.println("<form role='form' method='post' action='../CompraCliente'>");
