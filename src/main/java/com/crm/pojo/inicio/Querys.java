@@ -39,27 +39,25 @@ public class Querys {
         conn.close();
     }
     
-    public LinkedList consulta(String parametro) throws SQLException, ClassNotFoundException{
+    public UsuarioBean consulta(String parametro) throws SQLException, ClassNotFoundException{
          
                  openDB();
-                 LinkedList <UsuarioBean> l=new LinkedList<UsuarioBean>();
+                 UsuarioBean usu=new UsuarioBean();
                   PreparedStatement ps;
-                    ps = conn.prepareStatement("select * from cliente WHERE id_cliente='"+ parametro + "' limit 10;");
+                    ps = conn.prepareStatement("select * from cliente WHERE id_cliente='"+ parametro);
                     ResultSet rs= ps.executeQuery();
                     System.out.println(ps);
                     
                      while (rs.next()) {
-                        UsuarioBean usu=new UsuarioBean();
+                        
                         usu.setNombre_usu(rs.getString("nombre"));
                         usu.setCp_usu(rs.getString("cp"));
                         usu.setDireccion_usu(rs.getString("direccion"));
                         usu.setEmail_usu(rs.getString("email"));  
-                        
-                        l.add(usu);
                     }
                     closeDB();
                   
-        return l;      
+        return usu;      
                   
         }
      public ResultSet consultaGeneral(String parametro) throws SQLException, ClassNotFoundException{
@@ -67,7 +65,7 @@ public class Querys {
                  openDB();
                   PreparedStatement ps;
               
-                     ps = conn.prepareStatement("select * from cliente limit 10");
+                     ps = conn.prepareStatement("select * from promocion");
                                                     ResultSet rs= ps.executeQuery();
                                                       System.out.println(ps);
                     
