@@ -66,26 +66,26 @@ and open the template in the editor.
                                             <ul class="form-list">
                                                 <li class="form-list__row">
                                                     <label>Nombre</label>
-                                                    <input type="text" id="nombre" name="" onkeypress="return soloLetras(event)" />
+                                                    <input type="text" id="nombre" name="" placeholder="ingrece nombre" onkeypress="return soloLetras(event)" />
                                                 </li>
                                                 <li class="form-list__row">
                                                     <label>Número de tarjeta</label>
                                                     <div id="input--cc" class="creditcard-icon">
-                                                        <input type="text" id="tarjeta" name="cc_number"  maxlength="16" onkeypress="return SoloNumeros(event)"/>
+                                                        <input type="text" id="tarjeta" name="cc_number"  maxlength="16" placeholder="0123456789123456" onkeypress="return SoloNumeros(event)"/>
                                                     </div>
                                                 </li>
                                                 <li class="form-list__row form-list__row--inline">
                                                     <div>
                                                         <label>Fecha de expiración</label>
-                                                        <div class="form-list__input-inline">
-                                                            <input id="fecha1" type="date" class="form-control"/>
-                                                        </div>
+                                                       
+                                                            <input type="date" name="fecha1" id="fecha1"  class="form-control" />
+                                                        
                                                     </div>
                                                     <div>
                                                         <label>
                                                             CVC
                                                         </label>
-                                                        <input type="text" name="cc_cvc" placeholder="123"  id="cvc" onkeypress="return SoloNumeros(event)" />
+                                                        <input type="text" name="cc_cvc" placeholder="123"  id="cvc"  maxlength="3" onkeypress="return SoloNumeros(event)" />
                                                     </div>
                                                 </li>
                                                 <li>
