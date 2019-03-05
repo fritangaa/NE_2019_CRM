@@ -61,7 +61,7 @@ and open the template in the editor.
                     <div>
                         <form action="../Usuario/UsuarioBitacora.jsp" method="GET">
                             <span><span>1&nbsp;&nbsp;</span>Consultas</span><br><br>
-                            <input type="text" name="idcliente" id="idcliente" placeholder="id Cliente" maxlength="3" required>
+                            <input type="number" min="1" minlength="1" name="idcliente" id="idcliente" placeholder="id Cliente" maxlength="3" required onkeypress="return SoloNumeros(event)">
                             <input type="submit" name="ConsultaCliente" class="btn btn-danger" value="Consultar">
                         </form>
                         
@@ -116,13 +116,13 @@ and open the template in the editor.
                             <span><span></span>Agregar<br>nuevo proveedor</span><br>
                             <br>
                             <label for="idbitacora">Ingrese ID bitacora</label>
-                            <input class="form-control" type="text" name="idbitacora" id="idbitacora" placeholder="Ingresa id bitacora" style="WIDTH: 228px;" required>
+                            <input class="form-control" type="number" min="1" minlength="1" name="idbitacora" id="idbitacora" placeholder="Ingresa id bitacora" style="WIDTH: 228px;" required onkeypress="return SoloNumeros(event)">
                             <label for="idusuario">Ingresar tu ID</label>
-                            <input class="form-control" type="text" name="idusuario" id="idusuario" placeholder="Ingresa tu id" style="WIDTH: 228px;" required>
+                            <input class="form-control" type="number" min="1" minlength="1" name="idusuario" id="idusuario" placeholder="Ingresa tu id" style="WIDTH: 228px;" required onkeypress="return SoloNumeros(event)">
                             <label for="idcliente">Ingresa el ID del cliente</label>
-                            <input class="form-control" type="text" name="idcliente" id="idcliente" placeholder="Ingresa el id del cliente" style="WIDTH: 228px;" required>
+                            <input class="form-control" type="number" min="1" minlength="1" name="idcliente" id="idcliente" placeholder="Ingresa el id del cliente" style="WIDTH: 228px;" required onkeypress="return SoloNumeros(event)">
                             <label for="fecha">Ingresa la fecha</label>
-                            <input class="form-control" type="text" name="fecha" id="fecha" placeholder="Ingresa la fecha" style="WIDTH: 228px;" required>
+                            <input class="form-control" type="date" name="fecha" id="fecha" placeholder="Ingresa la fecha" style="WIDTH: 228px;" required>
                             <label for="actividad">Ingresa la actividad</label>
                             <textarea class="form-control" rows="5" name="actividad" id="comentario" placeholder="Ingresa comentario" required> </textarea><br>
                             <br>
