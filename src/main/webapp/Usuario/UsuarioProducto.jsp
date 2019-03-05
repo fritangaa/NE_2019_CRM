@@ -59,7 +59,7 @@ and open the template in the editor.
                             <div id="titulo" class="col-12">
                                 Eliminar<br>producto por código</div>
                            <br>
-                           <input type="number" name="codprod" min="1" minlength="1" placeholder="Código" id="codprod" required>
+                           <input type="number" name="codprod" min="1" minlength="1" placeholder="Código" id="codprod" required onkeypress="return SoloNumeros(event)">
                             <br>                            
                             <center><input type="submit" value="Eliminar" style="background-color: #9F150D" name="Buscar" class="btn btn-danger"></center>
                             <br>
@@ -68,7 +68,7 @@ and open the template in the editor.
                     <form method="POST" action="UsuarioProducto.jsp">
                             <span id="titulo">B&uacute;squeda por<br>c&oacute;digo de producto</span>
                             <br><br>
-                            <input type="number" name="codprod" min="1" minlength="1" placeholder="Código" id="codigo" required>
+                            <input type="number" name="codprod" min="1" minlength="1" placeholder="Código" id="codigo" required onkeypress="return SoloNumeros(event)">
                             
                             <center><input type="submit" value="Consultar" style="background-color: #9F150D" name="Buscar" class="btn btn-danger"></center>
                         </form>
@@ -112,7 +112,7 @@ and open the template in the editor.
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 form-style-5"><!-- Seccion derecha -->
                         <form method="POST" action="../../ingresar_producto" onsubmit="return">                        
                             <span id="titulo">Agregar<br>nuevo producto</span><br>
-                            <br><input type="number" name="codprodnuevo" placeholder="Código de barras" min="1" minlength="1" id="codigo_nuevoprod" required>                             
+                            <br><input type="number" name="codprodnuevo" placeholder="Código de barras" min="1" minlength="1" id="codigo_nuevoprod" required onkeypress="return SoloNumeros(event)">                             
                             <input type="text" name="nomproducto" placeholder="Nombre" id="nom_producto" required>
                             <select id="categoria" name="field4">
                                 <optgroup label="categorias" required>
