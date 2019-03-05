@@ -39,21 +39,25 @@ public class UsuarioInicio extends HttpServlet {
             throws ServletException, IOException, ClassNotFoundException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
          
-        Querys c = new Querys(); 
-        UsuarioBean usu= new UsuarioBean ();
-        
+       Querys c = new Querys(); 
+               
         String idcliente = request.getParameter("idCliente");
         
-        c.consulta(idcliente);  
+        UsuarioBean usu=c.consulta(idcliente);
+         
+        
+        System.out.println("Resultado 1: "+usu.getNombre_usu());
+        System.out.println("Resultado 2: "+usu.getDireccion_usu());
+        System.out.println("Resultado 3: "+usu.getCp_usu());
+        System.out.println("Resultado 4: "+usu.getEmail_usu());
                 
-        request.setAttribute("nombre", usu.getNombre_usu());
-        request.setAttribute("direccion", usu.getDireccion_usu());
-        request.setAttribute("codigo", usu.getCp_usu());
-        request.setAttribute("correo", usu.getEmail_usu());
+        request.getSession().setAttribute("nombre", usu.getNombre_usu());
+        request.getSession().setAttribute("direccion", usu.getDireccion_usu());
+        request.getSession().setAttribute("codigo", usu.getCp_usu());
+        request.getSession().setAttribute("correo", usu.getEmail_usu());
         
-        request.getRequestDispatcher("../UsuarioInicio.jsp").forward(request, response);
-        
-        //response.sendRedirect("Usuario/UsuarioInicio.jsp"); 
+        response.sendRedirect("Usuario/UsuarioInicio.jsp"); 
+
 
         
     }
