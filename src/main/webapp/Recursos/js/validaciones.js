@@ -81,9 +81,10 @@ function soloLetras(e){//Se utiliza para que el campo de texto solo acepte letra
     
     
     function ClientePago(){
- var hoy=new Date();
+ 
     var nombre=document.getElementById("nombre").value;
   var tarjeta=document.getElementById("tarjeta").value;
+  var hoy=new Date();
  var fecha=document.getElementById("fecha1").value;
  var cvc=document.getElementById("cvc").value;
     
@@ -98,8 +99,12 @@ function soloLetras(e){//Se utiliza para que el campo de texto solo acepte letra
      return false;   
     }
     
-     if(fecha>hoy){
-        alert("la fecha  no puede ser mayor ala fecha actual");
+    if (fecha=="" || fecha==null){
+        alert("ingrese una fecha para el pago");
+        return false;
+    }
+     if(fecha<hoy || hoy>fecha){
+        alert("la fecha  no puede ser menor ala fecha actual");
         return false;
     }
 

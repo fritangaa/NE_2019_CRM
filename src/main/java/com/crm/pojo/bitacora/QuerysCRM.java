@@ -31,7 +31,7 @@ public class QuerysCRM {
         Properties connProp = new Properties();
         connProp.put("user", "postgres");
         connProp.put("password", "root");
-        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/CRM", connProp);
+        conn = DriverManager.getConnection("jdbc:postgresql://localhost:8485/CRM", connProp);
     }
     
     public void closeDB() throws SQLException {
@@ -43,14 +43,14 @@ public class QuerysCRM {
                  openDB();
                   PreparedStatement ps;
                     if (parametro != null) {
-                                                    ps = conn.prepareStatement("select id_bc, fecha, actividad, idcliente, idusuario from bitacora_de_clientes where idcliente='"+parametro+"' ;");
+                                                    ps = conn.prepareStatement("select id_bc, fecha, actividad, idcliente, idusuario from bitacora_de_clientes where idcliente='"+parametro+"' limit 10;");
                                                     ResultSet rs= ps.executeQuery();
                                                       System.out.println(ps);
                     
                     closeDB();
                   return rs;
          }else {
-                     ps = conn.prepareStatement("select * from bitacora_de_clientes"
+                     ps = conn.prepareStatement("select * from bitacora_de_clientes limit 10"
                                                    );
                                                     ResultSet rs= ps.executeQuery();
                                                       System.out.println(ps);

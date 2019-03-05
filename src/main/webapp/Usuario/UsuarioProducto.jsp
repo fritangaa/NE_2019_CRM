@@ -1,3 +1,4 @@
+<%@page import="java.sql.ResultSet"%>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -44,98 +45,95 @@ and open the template in the editor.
                 <a class="navbar-brand text-white" href="#"><h5>Nombre de Usuario</h5></a>
             </nav>
         </header>
+        
         <div id="principal">
+            <div class="container-fluid">
+                
+                <div class="row">
+                    <br>
+                </div>
+                
             <div class="row">
-                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 container-fluid" ><!-- Seccion derecha (Visualizar tarea) -->
-                    <div style="background-color: #EDEDED; margin: 5%;">
-                        <div style="margin: 5%;">
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 container-fluid" ><!-- Seccion izquierda) -->
+                    <form method="POST" action="../../Eliminar_producto" onsubmit="return">
+                            <div id="titulo" class="col-12">
+                                Eliminar<br>producto por código</div>
+                           <br>
+                           <input type="number" name="codprod" min="1" minlength="1" placeholder="Código" id="codprod" required onkeypress="return SoloNumeros(event)">
+                            <br>                            
+                            <center><input type="submit" value="Eliminar" style="background-color: #9F150D" name="Buscar" class="btn btn-danger"></center>
+                            <br>
+                        </form>
+                    
+                    <form method="POST" action="UsuarioProducto.jsp">
+                            <span id="titulo">B&uacute;squeda por<br>c&oacute;digo de producto</span>
+                            <br><br>
+                            <input type="number" name="codprod" min="1" minlength="1" placeholder="Código" id="codigo" required onkeypress="return SoloNumeros(event)">
                             
-                        </div>
-                    </div>
+                            <center><input type="submit" value="Consultar" style="background-color: #9F150D" name="Buscar" class="btn btn-danger"></center>
+                        </form>
+                        <br>
                 </div>
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 container-fluid"><!-- Seccion central (Visualizar tarea) -->
-                    <div style="background-color: #EDEDED; margin-left: 2.5%;">
-                        <div style="margin: 2.5%;">
-                            <br>
-                            <div class="row">
-                                 <div class="container h-100">
-                                <div class="d-flex justify-content-center h-100">
-                                    <div class="searchbar">
-                                        <input class="search_input" type="text" id="buscar" name="" placeholder="Buscar...">
-                                        <a href="#" class="search_icon" onkeyup="return categoria()"><i class="fas fa-search"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                            <br>
-                            <form >
-                                <div class="row">
-                                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                        <h5>Productos</h5>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-
-                                    </div>
-                                    <div class="form-group col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                        <select name="Categoria" id="Categoriaa" class="form-control" >
-                                            <option value="0">Seleccione Una opccion</option>
-                                            <option value="product">Producto</option>
-                                            <option value="prov">Proovedor</option>
-                                            <option value="desc">Descripción</option>
-                                            <option value="precio">Precio</option>
-                                        </select>
-                                    </div>  
-                                </div>
-                                 <li>
-                                     <button type="button" class="button" onclick="return categoria()">Buscar</button>
-                                                </li>
-
-                            </form>
-                            <br>
-                            <table class="table">
-                                <thead class=" thead-light">
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Producto</th>
-                                        <th scope="col">Proveedor</th>
-                                        <th scope="col">Descripción</th>
-                                        <th scope="col">Precio</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Cable coaxial</td>
-                                        <td>Calbes CA CV</td>
-                                        <td>Calbe de 2m</td>
-                                        <td>$150</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Router MB-878</td>
-                                        <td>CISCO</td>
-                                        <td>V2.5</td>
-                                        <td>$45,000</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <br>
-                        </div>
-                    </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><!-- Seccion central (Visualizar tarea) -->
+                    <div class="table-responsive"><table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">código producto</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Categoria</th>
+                                            <th scope="col">Precio Unitario</th>
+                                            <th scope="col">ID Proveedor</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <jsp:useBean id="interTabla" scope="page" class="com.crm.pojo.inventario.QuerysProducto"/>
+                                    <%
+                                        String buscar= request.getParameter("codprod");
+                                        ResultSet rsTabla = interTabla.consultaespe(buscar);
+                                    %> 
+                                    <tbody>
+                                        <%
+                                            while (rsTabla.next()) {
+                                        %>
+                                        <tr id="modalInter">
+                                            <td><%=rsTabla.getString(1)%></td>
+                                            <td><%=rsTabla.getString(2)%></td>
+                                            <td><%=rsTabla.getString(3)%></td>
+                                            <td><%=rsTabla.getString(4)%></td>
+                                            <td><%=rsTabla.getString(5)%></td>
+                                            
+                                        </tr>
+                                        <%
+                                            }
+                                        %>
+                                    </tbody>
+                                </table></div>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 container-fluid" ><!-- Seccion derecha (Visualizar tarea) -->
-                    <div style="background-color: #EDEDED; margin: 5%;">
-                        <div style="margin: 5%;">
-                            
-                        </div>
-                    </div>
-                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 form-style-5"><!-- Seccion derecha -->
+                        <form method="POST" action="../../ingresar_producto" onsubmit="return">                        
+                            <span id="titulo">Agregar<br>nuevo producto</span><br>
+                            <br><input type="number" name="codprodnuevo" placeholder="Código de barras" min="1" minlength="1" id="codigo_nuevoprod" required onkeypress="return SoloNumeros(event)">                             
+                            <input type="text" name="nomproducto" placeholder="Nombre" id="nom_producto" required>
+                            <select id="categoria" name="field4">
+                                <optgroup label="categorias" required>
+                                    <option value="@">Seleccione&nbsp;una&nbsp;categoria</option>
+                                    <option value="com">computo</option>
+                                    <option value="red">redes</option>
+                                    <option value="cab">cables</option>
+                                    <option value="dis">dispositivos</option>
+                                    <option value="con">conectores</option>                                
+                                    <option value="otr">otros</option>
+                                </optgroup>
+                            </select>
+                            <input type="text" name="costoproducto" min="1" minlength="1" placeholder="Costo" id="costo" required onkeypress="return SoloNumeros(event)">
+                            <input type="text" name="provproducto" placeholder="Proveedor" id="proveedor" required onkeypress="return soloLetras(event)">
+                            <center><input type="submit" value="Agregar" style="background-color: #9F150D" name="nuevo" class="btn btn-danger"></center>                       
+                        </form>
+                    </div> 
             </div>
-            
+            </div>
         </div>
 
-    </div> 
-</div>
 </body>
 </html>
 

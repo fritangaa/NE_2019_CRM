@@ -93,7 +93,7 @@ and open the template in the editor.
                         <div style="margin: 5%;">
                                 <div class="form-group">
                                     <label for="idCliente">Id:</label>
-                                    <input type="text" class="form-control" id="idCliente" name="idCliente" onkeypress="return SoloNumeros(event)" disabled="true">
+                                    <input type="text" class="form-control" id="idCliente"  name="idCliente" onkeypress="return SoloNumeros(event)" disabled="true">
                                     <br>
                                 </div>
                         </div>

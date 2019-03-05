@@ -33,10 +33,10 @@ public class ClienteDB {
         Properties connProp = new Properties();
         connProp.put("user", "postgres");
         connProp.put("password", "root");
-        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/CRM", connProp);
+        conn = DriverManager.getConnection("jdbc:postgresql://localhost:8485/CRM", connProp);
         Statement stmt;        
         stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT * FROM producto");
+        ResultSet rs = stmt.executeQuery("SELECT * FROM producto limit 10");
             while (rs.next()) {
                 ProductoCliente pc=new ProductoCliente();
                 pc.setIdProducto(rs.getInt("id_producto"));
@@ -57,7 +57,7 @@ public class ClienteDB {
         connProp.put("user", "postgres");
         connProp.put("password", "root");
         
-        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/CRM", connProp);
+        conn = DriverManager.getConnection("jdbc:postgresql://localhost:8485/CRM", connProp);
         
         PreparedStatement ps;
         ps=conn.prepareStatement("INSERT INTO "+tabla+" ("+campos+") VALUES ("+valores+")");
@@ -75,7 +75,7 @@ public class ClienteDB {
         conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/CRM", connProp);
         Statement stmt;        
         stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT * FROM producto where nombre='"+producto+"'");
+        ResultSet rs = stmt.executeQuery("SELECT * FROM producto where nombre='"+producto+"' limit 10");
             while (rs.next()) {
                 ProductoCliente pc=new ProductoCliente();
                 pc.setIdProducto(rs.getInt("id_producto"));
