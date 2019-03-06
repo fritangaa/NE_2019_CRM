@@ -39,6 +39,7 @@ and open the template in the editor.
                     </ul>   
                 </div>
                 <a class="navbar-brand text-white" href="#"><h5>Nombre de Usuario</h5></a>
+                <img src="../Recursos/img/img_logo_2.png" style="height: 50px;" class="img-fluid rounded">
             </nav>
         </header>
         
