@@ -51,7 +51,7 @@ and open the template in the editor.
                 <br>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                     <div>
                         <center>
                             <h4>Consulta de usuario</h4>
@@ -60,7 +60,7 @@ and open the template in the editor.
                     
                     <div>
                         <form action="../Usuario/UsuarioBitacora.jsp" method="GET">
-                            <span><span>1&nbsp;&nbsp;</span>Consultas</span><br><br>
+                            <h6>Consultas</h6>
                             <input type="number" min="1" minlength="1" name="idcliente" id="idcliente" placeholder="id Cliente" maxlength="3" required onkeypress="return SoloNumeros(event)">
                             <input type="submit" name="ConsultaCliente" class="btn btn-danger" value="Consultar">
                         </form>
@@ -108,12 +108,12 @@ and open the template in the editor.
                     </div>
                 </div>
                                     
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 form-style-5"><!-- Seccion derecha -->
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-style-5"><!-- Seccion derecha -->
                         <form method="POST" action="../../Comentario" onsubmit="return">
                             
                             <div class="form-group">
 
-                            <span><span></span>Agregar<br>nuevo proveedor</span><br>
+                            <h6>Agregar nuevo proveedor</h6>
                             <br>
                             <label for="idbitacora">Ingrese ID bitacora</label>
                             <input class="form-control" type="number" min="1" minlength="1" name="idbitacora" id="idbitacora" placeholder="Ingresa id bitacora" style="WIDTH: 228px;" required onkeypress="return SoloNumeros(event)">
