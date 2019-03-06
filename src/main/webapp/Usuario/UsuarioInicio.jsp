@@ -36,9 +36,6 @@ and open the template in the editor.
                         <li class="nav-item">
                             <a href="../Usuario/UsuarioBitacora.jsp" class="nav-link text-white" id="Bitacora"  aria-haspopup="true" aria-expanded="false"><h5>Bitácora</h5></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" id="Informe"  aria-haspopup="true" aria-expanded="false"><h5>Informe</h5></a>
-                        </li>
                     </ul>   
                 </div>
                 <a class="navbar-brand text-white" href="#"><h5>Nombre de Usuario</h5></a>
