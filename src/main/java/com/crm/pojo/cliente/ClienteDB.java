@@ -33,7 +33,7 @@ public class ClienteDB {
         Properties connProp = new Properties();
         connProp.put("user", "postgres");
         connProp.put("password", "root");
-        conn = DriverManager.getConnection("jdbc:postgresql://localhost:8485/CRM", connProp);
+        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/CRM", connProp);
         Statement stmt;        
         stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT * FROM producto limit 10");
