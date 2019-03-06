@@ -18,8 +18,8 @@ and open the template in the editor.
         <script src="../Recursos/Bootstrap/include/popper.min.js" type="text/javascript"></script>
         <script src="../Gerencia/validaciones/validacion.js" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
-    <script src="../Recursos/js/validaciones.js" type="text/javascript"></script>
-    
+        <script src="../Recursos/js/validaciones.js" type="text/javascript"></script>
+
     </head>
     <body>
         <header class="sticky-top">
@@ -42,44 +42,53 @@ and open the template in the editor.
                 <img src="../Recursos/img/img_logo_2.png" style="height: 50px;" class="img-fluid rounded">
             </nav>
         </header>
-        
+
         <div id="principal">
-        <div class="container-fluid">
-            <div class="row">
-                <br>
-            </div>
-            <div class="row">
-                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                    <div>
-                        <center>
-                            <h4>Consulta de usuario</h4>
-                        </center>
-                    </div>
-                    
-                    <div>
-                        <form action="../Usuario/UsuarioBitacora.jsp" method="GET">
-                            <h6>Consultas</h6>
-                            <input type="number" min="1" minlength="1" name="idcliente" id="idcliente" placeholder="id Cliente" maxlength="3" required onkeypress="return SoloNumeros(event)">
-                            <input type="submit" name="ConsultaCliente" class="btn btn-danger" value="Consultar">
-                        </form>
-                        
-                    </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <br>
                 </div>
-                
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <thead>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div style="background-color: #EDEDED; margin: 5%;">
+                            <div style="margin: 5%;">
+                                <div>
+                                    <center>
+                                        <h4>Consulta de usuario</h4>
+                                    </center>
+                                </div>
+
+                                <div>
+                                    <form action="../Usuario/UsuarioBitacora.jsp" method="GET">
+                                        <h6>Consultas</h6>
+                                        <input type="number" min="1" minlength="1" name="idcliente" id="idcliente" placeholder="id Cliente" maxlength="3" required onkeypress="return SoloNumeros(event)">
+                                        <div>
+                                            <br>
+                                        </div>
+                                        <input type="submit" name="ConsultaCliente" class="btn btn-danger" value="Consultar">
+                                    </form>
+
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div style="background-color: #EDEDED;">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
                                         <tr>
                                             <th scope="col">ID bitacora</th>
                                             <th scope="col">Fecha</th>
                                             <th scope="col">Actividad</th>
                                             <th scope="col">ID cliente</th>
                                             <th scope="col">ID usuario</th>
-                                            
+
                                         </tr>
                                     </thead>
-                                    
+
                                     <jsp:useBean id="interTabla" scope="page" class="com.crm.pojo.bitacora.QuerysCRM"/>
                                     <%
                                         String parametro = request.getParameter("idcliente");
@@ -95,50 +104,55 @@ and open the template in the editor.
                                             <td><%=rsTabla.getString(3)%></td>
                                             <td><%=rsTabla.getString(4)%></td>
                                             <td><%=rsTabla.getString(5)%></td>
-                                            
-                                      
+
+
                                         </tr>
                                         <%
                                             }
                                         %>
                                     </tbody>
-                        </table>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 form-style-5"><!-- Seccion derecha -->
+                        <div style="background-color: #EDEDED; margin: 5%;">
+                            <div style="margin: 5%;">
+                            <form method="POST" action="../../Comentario" onsubmit="return">
+
+                                <div class="form-group">
+
+                                    <h6>Agregar nuevo proveedor</h6>
+                                    <br>
+                                    <label for="idbitacora">Ingrese ID bitacora</label>
+                                    <input class="form-control" type="number" min="1" minlength="1" name="idbitacora" id="idbitacora" placeholder="Ingresa id bitacora" style="WIDTH: 228px;" required onkeypress="return SoloNumeros(event)">
+                                    <label for="idusuario">Ingresar tu ID</label>
+                                    <input class="form-control" type="number" min="1" minlength="1" name="idusuario" id="idusuario" placeholder="Ingresa tu id" style="WIDTH: 228px;" required onkeypress="return SoloNumeros(event)">
+                                    <label for="idcliente">Ingresa el ID del cliente</label>
+                                    <input class="form-control" type="number" min="1" minlength="1" name="idcliente" id="idcliente" placeholder="Ingresa el id del cliente" style="WIDTH: 228px;" required onkeypress="return SoloNumeros(event)">
+                                    <label for="fecha">Ingresa la fecha</label>
+                                    <input class="form-control" type="date" name="fecha" id="fecha" placeholder="Ingresa la fecha" style="WIDTH: 228px;" required>
+                                    <label for="actividad">Ingresa la actividad</label>
+                                    <textarea class="form-control" rows="5" name="actividad" id="comentario" placeholder="Ingresa comentario" required> </textarea><br>
+                                    <br>
+                                    <input type="submit" value="Agregar" name="nuevo" class="btn btn-danger"> 
+
+                                </div>
+
+                            </form>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                                    
-            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-style-5"><!-- Seccion derecha -->
-                        <form method="POST" action="../../Comentario" onsubmit="return">
-                            
-                            <div class="form-group">
-
-                            <h6>Agregar nuevo proveedor</h6>
-                            <br>
-                            <label for="idbitacora">Ingrese ID bitacora</label>
-                            <input class="form-control" type="number" min="1" minlength="1" name="idbitacora" id="idbitacora" placeholder="Ingresa id bitacora" style="WIDTH: 228px;" required onkeypress="return SoloNumeros(event)">
-                            <label for="idusuario">Ingresar tu ID</label>
-                            <input class="form-control" type="number" min="1" minlength="1" name="idusuario" id="idusuario" placeholder="Ingresa tu id" style="WIDTH: 228px;" required onkeypress="return SoloNumeros(event)">
-                            <label for="idcliente">Ingresa el ID del cliente</label>
-                            <input class="form-control" type="number" min="1" minlength="1" name="idcliente" id="idcliente" placeholder="Ingresa el id del cliente" style="WIDTH: 228px;" required onkeypress="return SoloNumeros(event)">
-                            <label for="fecha">Ingresa la fecha</label>
-                            <input class="form-control" type="date" name="fecha" id="fecha" placeholder="Ingresa la fecha" style="WIDTH: 228px;" required>
-                            <label for="actividad">Ingresa la actividad</label>
-                            <textarea class="form-control" rows="5" name="actividad" id="comentario" placeholder="Ingresa comentario" required> </textarea><br>
-                            <br>
-                            <input type="submit" value="Agregar" name="nuevo" class="btn btn-danger"> 
-                            
-                            </div>
-
-                        </form>
-            
             </div>
+
         </div>
-        </div>
-                                    
-        </div>
-        
-                                    
-                                    
-         
-</body>
+
+
+
+
+    </body>
 </html>
 
