@@ -27,7 +27,10 @@
                     <h2 class="text-center">Bienvenido</h2>
                 </div>    
                 <div  class="col-lg-4 col-md-6 col-sm-12 col-xs-12" style="background-color: #EDEDED;">
-                    <form class="form-horizontal" role="form" method="POST" action="Login" onsubmit="return Ingresar()">            
+                    <form class="form-horizontal" role="form" method="POST" action="Login" onsubmit="return Ingresar()">  
+                         <div class="row d-flex justify-content-center">
+                             <img src="./Recursos/img/avatar.png" class="img-circle" width="204" height="204" />
+                         </div>
                         <div class="row d-flex justify-content-center">
                             <div class="form-group has-danger">
                                 <label for="usuario">Usuario</label>
