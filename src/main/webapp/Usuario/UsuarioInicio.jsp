@@ -82,9 +82,9 @@ and open the template in the editor.
                                 <thead class=" thead-light">
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">First</th>
-                                        <th scope="col">Last</th>
-                                        <th scope="col">Handle</th>
+                                        <th scope="col">Tipo</th>
+                                        <th scope="col">Descripción</th>
+                                        <th scope="col">Descuento</th>
                                     </tr>
                                 </thead>
                                  <jsp:useBean id="interTabla" scope="page" class="com.crm.pojo.inicio.Querys"/>
@@ -117,7 +117,7 @@ and open the template in the editor.
                     <div style="background-color: #EDEDED; margin: 5%;">
                         <div style="margin: 5%;">
                             <h5 align="center">Buscar Cliente</h5>
-                            <form role="form" method="post" onsubmit="return BuscarCliente()">
+                            <form accion="../UsuarioInicio" role="form" method="post" onsubmit="return BuscarCliente()">
                                 <div class="form-group">
                                     <label for="idCliente">Id del Cliente:</label>
                                     <input type="text" class="form-control" id="idCliente" name="idCliente" onkeypress="return SoloNumeros(event)">

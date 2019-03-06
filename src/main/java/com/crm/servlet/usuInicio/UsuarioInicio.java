@@ -43,13 +43,12 @@ public class UsuarioInicio extends HttpServlet {
                
         String idcliente = request.getParameter("idCliente");
         
-        UsuarioBean usu=c.consulta(idcliente);
-         
-        
-        System.out.println("Resultado 1: "+usu.getNombre_usu());
-        System.out.println("Resultado 2: "+usu.getDireccion_usu());
-        System.out.println("Resultado 3: "+usu.getCp_usu());
-        System.out.println("Resultado 4: "+usu.getEmail_usu());
+        UsuarioBean usu=c.consulta(idcliente);         
+//        
+//        System.out.println("Resultado 1: "+usu.getNombre_usu());
+//        System.out.println("Resultado 2: "+usu.getDireccion_usu());
+//        System.out.println("Resultado 3: "+usu.getCp_usu());
+//        System.out.println("Resultado 4: "+usu.getEmail_usu());
                 
         request.getSession().setAttribute("nombre", usu.getNombre_usu());
         request.getSession().setAttribute("direccion", usu.getDireccion_usu());
