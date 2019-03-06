@@ -44,7 +44,7 @@ public class Querys {
                  openDB();
                  UsuarioBean usu=new UsuarioBean();
                   PreparedStatement ps;
-                    ps = conn.prepareStatement("select * from cliente WHERE id_cliente='"+ parametro);
+                    ps = conn.prepareStatement("select * from cliente WHERE id_cliente="+ parametro);
                     ResultSet rs= ps.executeQuery();
                     System.out.println(ps);
                     
@@ -65,7 +65,7 @@ public class Querys {
                  openDB();
                   PreparedStatement ps;
               
-                     ps = conn.prepareStatement("select * from promocion");
+                     ps = conn.prepareStatement("select * from promocion WHERE idcliente="+ parametro);
                                                     ResultSet rs= ps.executeQuery();
                                                       System.out.println(ps);
                     
