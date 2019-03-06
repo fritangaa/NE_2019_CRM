@@ -65,7 +65,7 @@ public class Querys {
                  openDB();
                   PreparedStatement ps;
               
-                     ps = conn.prepareStatement("select * from promocion");
+                     ps = conn.prepareStatement("select * from promocion WHERE idcliente="+ parametro);
                                                     ResultSet rs= ps.executeQuery();
                                                       System.out.println(ps);
                     
