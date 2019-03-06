@@ -117,7 +117,7 @@ and open the template in the editor.
                     <div style="background-color: #EDEDED; margin: 5%;">
                         <div style="margin: 5%;">
                             <h5 align="center">Buscar Cliente</h5>
-                            <form accion="../UsuarioInicio" role="form" method="post" onsubmit="return BuscarCliente()">
+                            <form action="../UsuarioInicio" role="form" method="post" onsubmit="return BuscarCliente()">
                                 <div class="form-group">
                                     <label for="idCliente">Id del Cliente:</label>
                                     <input type="text" class="form-control" id="idCliente" name="idCliente" onkeypress="return SoloNumeros(event)">
