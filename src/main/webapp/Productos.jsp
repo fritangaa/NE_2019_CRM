@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="Recursos/Bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+        <script src="Recursos/Bootstrap/include/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed --> 
+        <script src="Recursos/Bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="Recursos/Bootstrap/include/popper.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
+        <link href="Recursos/css/estilos.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header class="sticky-top">
+            <!--barra de navegacion creada con bootstrap-->
+            <nav id="barraNavegadora" class="navbar navbar-expand-lg colorPrincipal" >
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">                    
+                        <li class="nav-item">
+                            <a href="Inicio.jsp" class="nav-link text-white"  aria-haspopup="true" aria-expanded="false"><img class="ic" border="0" height="25" width="25" src="Recursos/img/ic_inicio.png" /><p>Inicio</p></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Miembros.jsp" class="nav-link text-white" aria-haspopup="true" aria-expanded="false"><img class="ic" border="0" height="25" width="25" src="Recursos/img/ic_miembros.png" /><p>Miembros</p></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Terceros.jsp" class="nav-link text-white" aria-haspopup="true" aria-expanded="false"><img class="ic" border="0" height="25" width="25" src="Recursos/img/ic_terceros.png" /><p>Teceros</p></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Productos.jsp" class="nav-link text-white"  aria-haspopup="true" aria-expanded="false"><img class="ic"  border="0" height="25" width="25" src="Recursos/img/ic_productos.png" /><p>Productos</p></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Comercial.jsp" class="nav-link text-white" aria-haspopup="true" aria-expanded="false"><img class="ic" border="0" height="25" width="25" src="Recursos/img/ic_comercial.png" /><p>Comercial</p></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Financiera.jsp" class="nav-link text-white" aria-haspopup="true" aria-expanded="false"><img class="ic"  border="0" height="25" width="25" src="Recursos/img/ic_financiera.png" /><p>Financiera</p></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="RH.jsp" class="nav-link text-white" aria-haspopup="true" aria-expanded="false"><img class="ic" border="0" height="25" width="25" src="Recursos/img/ic_rh.png" /><p>RRHH</p></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Agenda.jsp" class="nav-link text-white"  aria-haspopup="true" aria-expanded="false"><img class="ic" border="0" height="25" width="25" src="Recursos/img/ic_agenda.png" /><p>Agenda</p></a>
+                        </li>
+                    </ul>   
+                </div>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white" aria-haspopup="true" aria-expanded="false"><img class="ic" border="0" height="25" width="25" src="Recursos/img/ic_usuario.png" /><p>Administrador</p></a>                       
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <div id="principal">
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 container-fluid" style="background-color: #f8f8f8;"><!-- Seccion central (Visualizar tarea) -->
+                    <div  class="row" style="height: 200px;">    
+                        <img class="imagen" border="0" height="auto" width="50%" src="Recursos/img/img_logo_2.png" />
+                    </div>
+                    <div  class="row">
+                        <div class="list-group" style="width: 100%;">
+                            <button type="button" class="list-group-item list-group-item-action"><strong>Productos</strong></button>
+                            <button type="button" class="list-group-item list-group-item-action">Nuevo producto</button>
+                            <button type="button" class="list-group-item list-group-item-action">Lista</button>
+                            <button type="button" class="list-group-item list-group-item-action">Stocks</button>
+                            <button type="button" class="list-group-item list-group-item-action">Estadísticas</button>
+                            <button type="button" class="list-group-item list-group-item-action"><strong>Almacenes</strong></button>
+                            <button type="button" class="list-group-item list-group-item-action">Nuevo almacén</button>
+                            <button type="button" class="list-group-item list-group-item-action">Lista</button>
+                            <button type="button" class="list-group-item list-group-item-action">Movimientos</button>
+                            <button type="button" class="list-group-item list-group-item-action">Transferencia de stock</button>
+                            <button type="button" class="list-group-item list-group-item-action">Reaprovisionamiento</button>
+                            <button type="button" class="list-group-item list-group-item-action"><strong>Envios</strong></button>
+                            <button type="button" class="list-group-item list-group-item-action">Nuevo envio</button>
+                            <button type="button" class="list-group-item list-group-item-action">Lista</button>
+                            <button type="button" class="list-group-item list-group-item-action">Estadísticas</button>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 container-fluid"><!-- Seccion derecha (Visualizar tarea) -->
+                    <div class="row">
+                        <p style="padding: 10px 10px"><span style="margin-right: 10px;"><img border="0" height="50" width="50" src="Recursos/img/ic_area_producto.png" /></span>Área de producto</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 container-fluid"><!-- Seccion derecha (Visualizar tarea) -->
+                            <table class="table table-bordered">
+                                <thead class="titulos">
+                                    <tr>
+                                        <td colspan="3">Estadísticas</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2">Productos ni a la venta ni a la compra</td>
+                                        <td class = "text-right"><strong>0</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Productos solo a la venta</td>
+                                        <td class = "text-right"><strong>0</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Productos solamente en compra</td>
+                                        <td class = "text-right"><strong>0</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Productos en venta o en compra</td>
+                                        <td class = "text-right"><strong>0</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Total</td>
+                                        <td class = "text-right"><strong>0</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 container-fluid"><!-- Seccion derecha (Visualizar tarea) -->
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div> 
+</div>
+</body>
+</html>
