@@ -36,12 +36,4 @@ margin-top: 10px;
     background-color: #333a56;
 }
 
-#tabAgenda .tab-content {
-  color : white;
-  background-color: #428bca;
-  padding : 5px 15px;
-}
 
-#tabAgenda .nav-pills > li > a {
-  border-radius: 0;
-}
