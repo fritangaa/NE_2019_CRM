@@ -63,92 +63,39 @@ and open the template in the editor.
 
 
         <div id="principal">
-            <div class="row">
-                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 container-fluid" style="background-color: #f8f8f8;"><!-- Seccion central (Visualizar tarea) -->
-                    <div  class="row" style="height: 200px;">    
-                        <img class="imagen" border="0" height="auto" width="50%" src="Recursos/img/img_logo_2.png" />
-                    </div>
-                    <div  class="row">
-                        <div class="list-group" style="width: 100%;">
-                            <button type="button" class="list-group-item list-group-item-action"><strong>Miembros</strong></button>
-                            <button type="button" class="list-group-item list-group-item-action">Nuevo miembro</button>
-                            <button type="button" class="list-group-item list-group-item-action">Lista</button>
-                            <button type="button" class="list-group-item list-group-item-action">Miembros borrador</button>
-                            <button type="button" class="list-group-item list-group-item-action">Miembros validos</button>
-                            <button type="button" class="list-group-item list-group-item-action">Miembros de baja</button>
-                            <button type="button" class="list-group-item list-group-item-action">Estadisticas</button>
-                            <button type="button" class="list-group-item list-group-item-action">Carnés de miembros</button>
-                            <button type="button" class="list-group-item list-group-item-action"><strong>Afiliaciones</strong></button>
-                            <button type="button" class="list-group-item list-group-item-action">Nueva afiliación</button>
-                            <button type="button" class="list-group-item list-group-item-action">Lista</button>
-                            <button type="button" class="list-group-item list-group-item-action"><strong>Tipo de miembros</strong></button>
-                            <button type="button" class="list-group-item list-group-item-action">Nuevo</button>
-                            <button type="button" class="list-group-item list-group-item-action">Lista</button>
-                        </div>
-                    </div>
+             <div class="container-fluid">
+                <div class="row">
                     <br>
                 </div>
-                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 container-fluid"><!-- Seccion derecha (Visualizar tarea) -->
-                    <div class="row">
-                        <p style="padding: 10px 10px"><span style="margin-right: 10px;"><img border="0" height="50" width="50" src="Recursos/img/ic_area_miembros.png" /></span>Área miembros</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 container-fluid"><!-- Seccion derecha (Visualizar tarea) -->
-                            <p class="titulos">Estadísticas </p>  
-                            <div class="row justify-content-center" style="margin-left: 20px; margin-right: 20px;">
-                                <canvas id="gInventarios" width="100%" height="60px"></canvas>
-                                <script type="text/javascript" src="Recursos/graficas/graficaInventarios.js"></script>
-                            </div>
-                            <table class="table table-bordered">
-                                <thead class="titulos">
-                                    <tr>
-                                        <td>Afiliaciones</td>
-                                        <td>Número</td>
-                                        <td>Importe total</td>
-                                        <td>Importe promedio</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Total</td>
-                                        <td>0</td>
-                                        <td>0.00</td>
-                                        <td>0.00</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 container-fluid"><!-- Seccion derecha (Visualizar tarea) -->
-                            <p class="titulos">Uíltimos 5 miembros modificados</p>    
-                            <p class="titulos">Uíltimas 5 subscripciones modificadas</p>  
-                            <table class="table table-bordered">
-                                <thead class="titulos">
-                                    <tr>
-                                        <td>Tipos de miembros</td>
-                                        <td>Miembros borrador</td>
-                                        <td>Miembros no al día</td>
-                                        <td>Miembros al día</td>
-                                        <td>Miembros de baja</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Total</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                <div class="row">
+                    <div style="background-color: #f4f7f8;" class="col-lg-3 col-md-3 col-sm-3 col-xs-12 form-style-5"> <!-- Seccion izquierda -->
+                        <form method="POST" action="../../Eliminar_producto" onsubmit="return vali_almacen();">
+                            <div id="titulo" class="col-12">
+                                <span class="number">1</span>Eliminar<br>producto por código</div>
+                           <br>
+                            <input type="number" name="codprod" placeholder="Código" id="codprod" required>
+                                                       
+                            <center><input type="submit" value="Eliminar" style="background-color: #3498DB" name="Buscar" class="btn btn-danger"></center>
+                            <br>
+                        </form>
+                    </div>                       
+
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><!-- Seccion central --> 
+                        
                     </div>
 
+                    <div style="background-color: #f4f7f8;" class="col-lg-3 col-md-3 col-sm-3 col-xs-12 form-style-5"><!-- Seccion derecha -->
+                        
+                    </div> 
+                        
                 </div>
-            </div>
+            </div> 
         </div>
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    </div> 
-</div>
 </body>
 </html>
