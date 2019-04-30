@@ -6,6 +6,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 
 -->
+
 <html>
     <head>
         <title>TODO supply a title</title>
@@ -83,23 +84,7 @@ and open the template in the editor.
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <%
-                                        LinkedList<ProductoCliente> lista = ClienteDB.consultaProducto();
-                                        for (int i = 0; i < lista.size(); i++) {
-                                            out.println("<form role='form' method='post' action='../CompraCliente'>");
-                                            out.println("<tr>");
-                                            out.println("<th scope='row'><input type='number' name='idproducto' min='0' max='100' id='idproducto' value='" + lista.get(i).getIdProducto() + "'></th>");
-                                            out.println("<td >" + lista.get(i).getNombre() + "</td>");
-                                            out.println("<td>" + lista.get(i).getProveedor() + "</td>");
-                                            out.println("<td></td>");
-                                            out.println("<td>$<input type='number' name='precio' min='0' max='10000' id='precio' required value='" + lista.get(i).getPrecio() + "'  ></td>");
-                                            out.println("<td><input type='number' name='cantidad' min='0' max='100' id='cantidad' value='0' required></></td>");
-                                            out.println("<td><a href='#' class='btn btn-default producto' precio='precio' titulo='Telefonos inalambricos' role='button'>añadir a carrito</a></td>");
-                    
-                                            
-                                            out.println("</form>");
-                                        }
-                                    %>
+                            
                          
                                 </tbody>
                                 
