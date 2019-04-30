@@ -146,7 +146,7 @@ and open the template in the editor.
                                     <br>
                                     <input class="form-control"  type="text" name="costoproducto" min="1" minlength="1" placeholder="Costo" id="costo" required onkeypress="return SoloNumeros(event)">
                                     <br>
-                                    <input class="form-control"  type="text" name="provproducto" placeholder="Proveedor" id="proveedor" required onkeypress="return soloLetras(event)">
+                                    <input class="form-control"  type="text" name="provproducto" placeholder="Proveedor" id="proveedor" required >
                                     <br>
                                     <center><input  type="submit" value="Agregar" style="background-color: #9F150D" name="nuevo" class="btn btn-danger"></center>                       
                                 </form>
