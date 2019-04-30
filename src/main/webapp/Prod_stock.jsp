@@ -1,9 +1,10 @@
+<%@page import="java.sql.ResultSet"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<%-- 
+    Document   : Prod_lista
+    Created on : 28/04/2019, 06:02:43 PM
+    Author     : Marii
+--%>
 <html>
     <head>
         <title>Usiario_CRM</title>
@@ -64,7 +65,7 @@ and open the template in the editor.
 
         <div id="principal">
             <div class="row">
-               <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 container-fluid" style="background-color: #f8f8f8;"><!-- Seccion central (Visualizar tarea) -->
+              <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 container-fluid" style="background-color: #f8f8f8;"><!-- Seccion central (Visualizar tarea) -->
                     <div  class="row" style="height: 200px;">    
                         <img class="imagen" border="0" height="auto" width="50%" src="Recursos/img/img_logo_2.png" />
                     </div>
@@ -95,18 +96,43 @@ and open the template in the editor.
                         <p style="padding: 10px 10px"><span style="margin-right: 10px;"><img border="0" height="50" width="50" src="Recursos/img/ic_area_producto.png" /></span>Área de producto</p>
                     </div>
                     <div class="row">
-                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 container-fluid"><!-- Seccion derecha (Visualizar tarea) -->
-                    <div class="row">
-                    </div>
-                    <div class="row justify-content-center" style="background-color: #f8f8f8; margin-left: 10%; margin-right: 10%;" >
-                        <h2 class="titulos text-center" style="width: 100%;">Resúmen</h2>  
+                      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 container-fluid"><!-- Seccion central -->
+                        <div class="row justify-content-center" style="background-color: #f8f8f8; margin-left: 10%; margin-right: 10%;" >
+                        <h2 class="titulos text-center" style="width: 100%;">Stocks</h2>  
                         <br>
-                        <canvas id="gInventarios" width="100%" height="30px"></canvas>
-                        <br>
-                        <canvas id="Gconta" width="100%" height="35px"></canvas>
-                        <script src="componentes/graficainicio.js" type="text/javascript"></script>
-                    </div>
-                        </div>                        
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>Folio</th>
+                                    <th>Nombre</th>
+                                    <th>Cantidad</th>
+                                    <th>Maxímo</th>
+                                    <th>Mínimo</th>
+                                    
+                                </tr>                     
+                            <jsp:useBean id="tabla" scope="page" class="com.crm.pojo.Usuario.Prodstock"/>
+                                <%                                    
+                                    ResultSet rsTabla = tabla.ConsultaDev();
+
+                                %> 
+                                <tbody>
+                                    <%                                            while (rsTabla.next()) {
+                                    %>
+                                    <tr id="modalInter">
+                                        <td><%=rsTabla.getString(1)%></td>
+                                        <td><%=rsTabla.getString(2)%></td>
+                                        <td><%=rsTabla.getString(3)%></td>
+                                        <td><%=rsTabla.getString(4)%></td>
+                                        <td><%=rsTabla.getString(5)%></td>
+                                    </tr>
+                                    <%
+                                        }
+                                    %>
+                                </tbody>                  
+
+                            </table>                             
+                        </div>
+                        </div> </div>                         
                     </div>
 
                 </div>
