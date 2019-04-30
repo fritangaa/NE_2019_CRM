@@ -48,9 +48,7 @@ and open the template in the editor.
                         <li class="nav-item">
                             <a href="Financiera.jsp" class="nav-link text-white" aria-haspopup="true" aria-expanded="false"><img class="ic"  border="0" height="25" width="25" src="../Recursos/img/ic_financiera.png" /><p>Financiera</p></a>
                         </li>
-                        <li class="nav-item">
-                            <a href="RH.jsp" class="nav-link text-white" aria-haspopup="true" aria-expanded="false"><img class="ic" border="0" height="25" width="25" src="../Recursos/img/ic_rh.png" /><p>RRHH</p></a>
-                        </li>
+                        
                         <li class="nav-item">
                             <a href="../Agenda.jsp" class="nav-link text-white"  aria-haspopup="true" aria-expanded="false"><img class="ic" border="0" height="25" width="25" src="../Recursos/img/ic_agenda.png" /><p>Agenda</p></a>
                         </li>
@@ -148,9 +146,10 @@ and open the template in the editor.
                         
                           
                         
-                        <form method="POST" action="com_consultaprov.jsp" onsubmit="return vali_almacen();">
+                        <form method="POST" action="com_consultaFacturas.jsp" onsubmit="return">
                             <div id="titulo" class="col-12">
                                 <span class="number">3</span>B&uacute;squeda de<br>facturas</div>
+                                <input type="text" name="id_factura" placeholder="Ingresa id de factura" id="id_factura" required>
                             
                             <center><input type="submit" value="Consultar" style="background-color: #3498DB" name="Buscar" class="btn"></center>
                             <br>
