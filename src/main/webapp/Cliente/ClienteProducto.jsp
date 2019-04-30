@@ -30,8 +30,8 @@ and open the template in the editor.
     </head>
     
      <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.min.css">
-    <script src="bootstrap.min.js"></script>
+   <!-- <link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.min.css">
+   <!-- <script src="bootstrap.min.js"></script>-->
     
     <body>
         <header class="sticky-top">
