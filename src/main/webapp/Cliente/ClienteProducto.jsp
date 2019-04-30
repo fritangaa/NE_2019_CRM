@@ -9,7 +9,7 @@ and open the template in the editor.
 
 <html>
     <head>
-        <title>TODO supply a title</title>
+         <title>Productos</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../Recursos/Bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -23,38 +23,49 @@ and open the template in the editor.
         <script src="../Recursos/js/validaciones.js" type="text/javascript"></script>
         <link href="../Recursos/css/buscador.css" rel="stylesheet" type="text/css"/>
         <link href="../Recursos/css/ClientePagoCSS.css" rel="stylesheet" type="text/css"/>
-
         
-               <meta name="description" content="Bootstrap HTML5">
+        <meta name="description" content="Bootstrap HTML5">
         <meta name="keywords" content="HTML5, CSS3, JavaScript">
+
+        <link href="../Recursos/css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="css/estilos.css" rel="stylesheet" type="text/CSS">
+        <link href="css/laterales.css" rel="stylesheet" type="text/CSS">
     </head>
+        
+ 
     
-     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
    <!-- <link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.min.css">
    <!-- <script src="bootstrap.min.js"></script>-->
     
+ 
     <body>
         <header class="sticky-top">
             <!--barra de navegacion creada con bootstrap-->
-            <nav class="navbar navbar-expand-lg navbar-dark barra bg-primary" >
+            <nav id="barraNavegadora" class="navbar navbar-expand-lg colorPrincipal">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav mr-auto">                    
-                        <li class="nav-item">
-                            <a href="../Cliente/ClienteInicio.jsp" class="nav-link text-white" id="Inicio"  aria-haspopup="true" aria-expanded="false"><h5>Inicio</h5></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto"> 
+                        
+                        <li class="nav-item dropdown">
+                            <a href="../Cliente/ClienteInicio.jsp" class="nav-link text-white" aria-haspopup="true" aria-expanded="false"><img class="ic" border="0" height="25" width="25" src="../Recursos/img/ic_inicio.png" /><p>Inicio</p></a>
                         </li>
-                        <li class="nav-item">
-                            <a href="../Cliente/ClienteProducto.jsp" class="nav-link text-white" id="Bitacora"  aria-haspopup="true" aria-expanded="false"><h5>Productos</h5></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../Cliente/ClientePago.jsp"  class="nav-link text-white" id="Informe"  aria-haspopup="true" aria-expanded="false"><h5>Pago</h5></a>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" style="color: white"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="ic" border="dropdown-toggle0" height="25" width="25" src="../Recursos/img/prod.png" />Catalogo de productos</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="../Cliente/ClienteProducto.jsp" style="color: white">Telefonia</a>
+                                <a class="dropdown-item" href="../Cliente/ClienteProducto.jsp" style="color: white">Conectores</a>
+                                <a class="dropdown-item" href="../Cliente/ClienteProducto.jsp" style="color: white">Enrrutadores</a>
+                                <a class="dropdown-item" href="../Cliente/ClienteProducto.jsp" style="color: white">Cables</a>
+                                
+                            </div>
                         </li>
                     </ul>   
                 </div>
                 <a class="navbar-brand text-white" href="#"><h5>Nombre de Cliente</h5></a>
-                <img src="../Recursos/img/img_logo_2.png" style="height: 50px;" class="img-fluid rounded">
+                <img src="../Recursos/img/avatar.png" style="height: 50px;" class="img-fluid rounded">
             </nav>
         </header>
        <!--   <div id="principal">
