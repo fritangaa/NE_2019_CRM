@@ -132,48 +132,27 @@ and open the template in the editor.
             <div class="row">
       <div class="col-xs-6 col-sm-3 col-md-3">
         <div class="thumbnail">
-          <img data-src="holder.js/100%x200" alt="100%x200" src="imagen1.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+          <img data-src="holder.js/100%x200" alt="100%x200" src="imagen7.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
           <div class="caption">
-            <h3>Telefonos analogos</h3>
-            <p>buena señal</p>
+            <h3>Repetidor</h3>
+            <p>duplica la señal</p>
             <p>
-			<a href="#" class="btn btn-default producto" precio="65" titulo="Telefonos analogos"role="button">Comprar</a></p>
+			<a href="#" class="btn btn-default producto" precio="355" titulo="Repetidor de señal"role="button">Comprar</a></p>
           </div>
         </div>
       </div>
       <div class="col-xs-6 col-sm-3 col-md-3">
         <div class="thumbnail">
-          <img data-src="holder.js/100%x200" alt="100%x200" src="imagen2.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+          <img data-src="holder.js/100%x200" alt="100%x200" src="imagen8.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
           <div class="caption">
-            <h3>Radio de dos vias</h3>
-            <p> arta señal</p>
+            <h3>SWITCH</h3>
+            <p> 24 puertos</p>
             <p>
-			<a href="#" class="btn btn-default producto" precio="56" titulo="Radio de dos vias" role="button">Comprar</a></p>
+			<a href="#" class="btn btn-default producto" precio="10000" titulo="switch" role="button">Comprar</a></p>
           </div>
         </div>
       </div>
-      <div class="col-xs-6 col-sm-3 col-md-3">
-        <div class="thumbnail">
-          <img data-src="holder.js/100%x200" alt="100%x200" src="imagen3.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-          <div class="caption">
-            <h3>Telefonos inalambricos</h3>
-            <p>ahorro en cuano a cable alta duracion</p>
-            <p>
-			<a href="#" class="btn btn-default producto" precio="24" titulo="Telefonos inalambricos" role="button">Comprar</a></p>
-          </div>
-        </div>
-      </div>
-               <div class="col-xs-6 col-sm-3 col-md-3">
-        <div class="thumbnail">
-          <img data-src="holder.js/100%x200" alt="100%x200" src="imagen4.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-          <div class="caption">
-            <h3>Telefonos ip </h3>
-            <p>telefonos con configuracion ip de alto alcance</p>
-            <p>
-			<a href="#" class="btn btn-default producto" precio="61" titulo="Telefonos ip" role="button">Comprar</a></p>
-          </div>
-        </div>
-      </div>
+     
     </div>
             
              <footer id="pie" class="col-md-12">
