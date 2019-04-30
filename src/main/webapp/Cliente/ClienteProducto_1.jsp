@@ -9,7 +9,7 @@ and open the template in the editor.
 
 <html>
     <head>
-         <title>Productos</title>
+         <title>Teléfonos</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../Recursos/Bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -52,10 +52,10 @@ and open the template in the editor.
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" style="color: white"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="ic" border="dropdown-toggle0" height="25" width="25" src="../Recursos/img/prod.png" />Catalogo de productos</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="../Cliente/ClienteProducto_1.jsp" style="color: white">Telefonia</a>
-                                <a class="dropdown-item" href="../Cliente/ClienteProducto_2.jsp" style="color: white">Conectores</a>
-                                <a class="dropdown-item" href="../Cliente/ClienteProducto_3.jsp" style="color: white">Enrrutadores</a>
-                                <a class="dropdown-item" href="../Cliente/ClienteProducto.jsp" style="color: white">Cables</a>
+                                <a class="dropdown-item" href="../Cliente/ClienteProducto.jsp" style="color: white">Telefonia</a>
+                                <a class="dropdown-item" href="../Cliente/ClienteProducto_1.jsp" style="color: white">Conectores</a>
+                                <a class="dropdown-item" href="#" style="color: white">Enrrutadores</a>
+                                <a class="dropdown-item" href="../Cliente/ClienteProducto_3.jsp" style="color: white">Cables</a>
                                 
                             </div>
                         </li>
