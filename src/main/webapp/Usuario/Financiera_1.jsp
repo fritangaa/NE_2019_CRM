@@ -146,7 +146,7 @@ and open the template in the editor.
                         
                           
                         
-                        <form method="POST" action="Financiera_1.jsp" onsubmit="return">
+                        <form method="POST" action="Financiera.jsp" onsubmit="return">
                             <div id="titulo" class="col-12">
                                 <span class="number">3</span>B&uacute;squeda de<br>facturas</div>
                                 <input type="text" name="id_factura" placeholder="Ingresa id de factura" id="id_factura" required>
