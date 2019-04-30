@@ -55,9 +55,9 @@ and open the template in the editor.
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" style="color: white"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="ic" border="dropdown-toggle0" height="25" width="25" src="../Recursos/img/prod.png" />Catalogo de productos</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="../Cliente/ClienteProducto.jsp" style="color: white">Telefonia</a>
-                                <a class="dropdown-item" href="../Cliente/ClienteProducto.jsp" style="color: white">Conectores</a>
-                                <a class="dropdown-item" href="../Cliente/ClienteProducto.jsp" style="color: white">Enrrutadores</a>
+                                <a class="dropdown-item" href="../Cliente/ClienteProducto_1.jsp" style="color: white">Telefonia</a>
+                                <a class="dropdown-item" href="../Cliente/ClienteProducto_2.jsp" style="color: white">Conectores</a>
+                                <a class="dropdown-item" href="../Cliente/ClienteProducto_3.jsp" style="color: white">Enrrutadores</a>
                                 <a class="dropdown-item" href="../Cliente/ClienteProducto.jsp" style="color: white">Cables</a>
                                 
                             </div>
@@ -122,22 +122,6 @@ and open the template in the editor.
 
     </div> 
 </div>
-
-
-
- <aside id="columna" class="col-md-2">
- 
-           <div class="list-group">
-  <a href="#" class="list-group-item active">
-    Categoría
-  </a>
-               
-  <a href="ClienteProducto.jsp" class="list-group-item">Telefonia</a>
-  <a href="ClienteProducto_1.jsp" class="list-group-item">Conectores</a>
-  <a href="ClienteProducto_2.jsp" class="list-group-item">Enrrutadores</a>
-  <a href="ClienteProducto_3.jsp" class="list-group-item">Cables</a>
-</div>
-        </aside>
 
         <section id="seccion" class="col-md-8">
             <div class="row">
