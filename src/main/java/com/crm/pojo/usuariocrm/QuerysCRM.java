@@ -113,4 +113,32 @@ public class QuerysCRM {
                     closeDB();
                   return rs;
         }
+    
+    public ResultSet consultaFactProv() throws SQLException, ClassNotFoundException{
+         
+                 openDB();
+                  PreparedStatement ps;
+                    
+                     ps = conn.prepareStatement("select * from factura_proveedor");
+                    ResultSet rs= ps.executeQuery();
+          
+                    System.out.println(ps);
+                    
+                    closeDB();
+                  return rs;
+        }
+    
+    public ResultSet consultaFactCliente() throws SQLException, ClassNotFoundException{
+         
+                 openDB();
+                  PreparedStatement ps;
+                    
+                     ps = conn.prepareStatement("select * from factura_cliente");
+                    ResultSet rs= ps.executeQuery();
+          
+                    System.out.println(ps);
+                    
+                    closeDB();
+                  return rs;
+        }
 }
