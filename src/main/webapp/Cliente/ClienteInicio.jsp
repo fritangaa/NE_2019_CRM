@@ -60,59 +60,13 @@ and open the template in the editor.
         <div id="principal">
             <div class="row">
                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 container-fluid"><!-- Seccion central (Visualizar tarea) -->
-                    <div style="background-color: #EDEDED; margin-left: 2.5%;">
-                        <div style="margin: 2.5%;">
-                            <h5 align="center">Historial</h5>
-                            <br>
-                            <table class="table">
-                                <thead class=" thead-light">
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Día</th>
-                                        <th scope="col">Descripción</th>
-                                        <th scope="col">Atendio</th>
-                                        <th scope="col">Número</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>@twitter</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <br>
-                        </div>
-                    </div>
+                    <br>
+                    <center> 
+                        <font face="Comic Sans MS" style="color:blue"><h1>Empresa de Tecnologías de la información y comunicación</h1></font>
+                    </center>
+                <img src="../Recursos/img/iniciocliente.jpg" style="height: 400px; width: 100%; display: block;" class="img-fluid rounded">
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 container-fluid" ><!-- Seccion derecha (Visualizar tarea) -->
-                    <div style="background-color: #EDEDED; margin: 5%;">
-                        <div style="margin: 5%;">
-                                <div class="form-group">
-                                    <label for="idCliente">Id:</label>
-                                    <input type="text" class="form-control" id="idCliente"  name="idCliente" onkeypress="return SoloNumeros(event)" disabled="true">
-                                    <br>
-                                </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
             
         </div>

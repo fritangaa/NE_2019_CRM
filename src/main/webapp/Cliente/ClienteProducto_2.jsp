@@ -52,9 +52,9 @@ and open the template in the editor.
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" style="color: white"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="ic" border="dropdown-toggle0" height="25" width="25" src="../Recursos/img/prod.png" />Catalogo de productos</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="../Cliente/ClienteProducto.jsp" style="color: white">Telefonia</a>
+                                <a class="dropdown-item" href="../Cliente/ClienteProducto.jsp" style="color: white">Telefonía</a>
                                 <a class="dropdown-item" href="../Cliente/ClienteProducto_1.jsp" style="color: white">Conectores</a>
-                                <a class="dropdown-item" href="#" style="color: white">Enrrutadores</a>
+                                <a class="dropdown-item" href="../Cliente/ClienteProducto_2.jsp" style="color: white">Enrrutadores</a>
                                 <a class="dropdown-item" href="../Cliente/ClienteProducto_3.jsp" style="color: white">Cables</a>
                                 
                             </div>
@@ -116,42 +116,66 @@ and open the template in the editor.
             </div>
 
         </div>-->
-
-    </div> 
-</div>
- <section id="seccion" class="col-md-8">
-            <div class="row">
-      <div class="col-xs-6 col-sm-3 col-md-3">
-        <div class="thumbnail">
-          <img data-src="holder.js/100%x200" alt="100%x200" src="imagen7.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-          <div class="caption">
-            <h3>Repetidor</h3>
-            <p>duplica la señal</p>
-            <p>
-			<a href="#" class="btn btn-default producto" precio="355" titulo="Repetidor de señal"role="button">Comprar</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-sm-3 col-md-3">
-        <div class="thumbnail">
-          <img data-src="holder.js/100%x200" alt="100%x200" src="imagen8.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-          <div class="caption">
-            <h3>SWITCH</h3>
-            <p> 24 puertos</p>
-            <p>
-			<a href="#" class="btn btn-default producto" precio="10000" titulo="switch" role="button">Comprar</a></p>
-          </div>
-        </div>
-      </div>
-     
-    </div>
+       
+       
+       <div class="container-fluid contenido">
             
-             <footer id="pie" class="col-md-12">
-                Gracias por su compra buen dia 
-            </footer>   
-        </section>
+        <div class="row">
+        <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12">
         </div>
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+            <br>
+            <center><font face="Comic Sans MS"><h1>Enrrutadores</h1></font></center>
+            <div class="row">
+            <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" class="form-style-5">
+                                        <br>
+                                        <br>
+                                        <img data-src="holder.js/100%x200" alt="100%x200" src="imagen7.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                                        <div class="caption">
+                                            <center>
+                                                <font face="Comic Sans MS"><h4>Repetidor</h4></font>
+                                                <font face="Comic Sans MS" style="color:blue"><h5>$1000</h5></font>
+                                                <font face="Comic Sans MS"><p>Duplica la señal.</p></font>
+                                                <p><a href="#" class="btn btn-primary producto" precio="1000" titulo="Repetidor de señal" role="button">Comprar</a></p>
+                                            
+                                            </center>
+                                          
+                                        </div>
+                                    </div>
+
+                                </tr>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" class="form-style-5">
+                                        <br>
+                                        <br>
+                                         <img data-src="holder.js/100%x200" alt="100%x200" src="imagen8.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                                        <div class="caption">
+                                            <center>
+                                                <font face="Comic Sans MS"><h4>SWITCH</h4></font>
+                                                <font face="Comic Sans MS" style="color:blue"><h5>$15000</h5></font>
+                                                <font face="Comic Sans MS"><p>24 puertos</p></font>
+                                                <p><a href="#" class="btn btn-primary producto" precio="15000" titulo="switch"  role="button">Comprar</a></p>
+                                            </center>
+                                          
+                                        </div>
+                                  </div>
+                            </thead>
+             </table>
+           
+      </div>
+    
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12">
+                </div>
+              
+       </div>
     </div>
+
+    
+ 
+        
 	<script src="minicart.js"></script>
 	<script>
 	  // configuración inicial del carrito 

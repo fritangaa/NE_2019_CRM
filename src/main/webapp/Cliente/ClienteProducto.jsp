@@ -9,7 +9,7 @@ and open the template in the editor.
 
 <html>
     <head>
-         <title>Productos</title>
+         <title>Telefonía</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../Recursos/Bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -55,9 +55,9 @@ and open the template in the editor.
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" style="color: white"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="ic" border="dropdown-toggle0" height="25" width="25" src="../Recursos/img/prod.png" />Catalogo de productos</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="../Cliente/ClienteProducto.jsp" style="color: white">Telefonia</a>
+                                <a class="dropdown-item" href="../Cliente/ClienteProducto.jsp" style="color: white">Telefonía</a>
                                 <a class="dropdown-item" href="../Cliente/ClienteProducto_1.jsp" style="color: white">Conectores</a>
-                                <a class="dropdown-item" href="#" style="color: white">Enrrutadores</a>
+                                <a class="dropdown-item" href="../Cliente/ClienteProducto_2.jsp" style="color: white">Enrrutadores</a>
                                 <a class="dropdown-item" href="../Cliente/ClienteProducto_3.jsp" style="color: white">Cables</a>
                                 
                             </div>
@@ -120,63 +120,96 @@ and open the template in the editor.
 
         </div>-->
 
-    </div> 
-</div>
-
-        <section id="seccion" class="col-md-8">
-            <div class="row">
-      <div class="col-xs-6 col-sm-3 col-md-3">
-        <div class="thumbnail">
-          <img data-src="holder.js/100%x200" alt="100%x200" src="imagen1.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-          <div class="caption">
-            <h3>Telefonos analogos</h3>
-            <p>buena señal</p>
-            <p>
-			<a href="#" class="btn btn-default producto" precio="65" titulo="Telefonos analogos"role="button">Comprar</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-sm-3 col-md-3">
-        <div class="thumbnail">
-          <img data-src="holder.js/100%x200" alt="100%x200" src="imagen2.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-          <div class="caption">
-            <h3>Radio de dos vias</h3>
-            <p> arta señal</p>
-            <p>
-			<a href="#" class="btn btn-default producto" precio="56" titulo="Radio de dos vias" role="button">Comprar</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-sm-3 col-md-3">
-        <div class="thumbnail">
-          <img data-src="holder.js/100%x200" alt="100%x200" src="imagen3.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-          <div class="caption">
-            <h3>Telefonos inalambricos</h3>
-            <p>ahorro en cuano a cable alta duracion</p>
-            <p>
-			<a href="#" class="btn btn-default producto" precio="24" titulo="Telefonos inalambricos" role="button">Comprar</a></p>
-          </div>
-        </div>
-      </div>
-               <div class="col-xs-6 col-sm-3 col-md-3">
-        <div class="thumbnail">
-          <img data-src="holder.js/100%x200" alt="100%x200" src="imagen4.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-          <div class="caption">
-            <h3>Telefonos ip </h3>
-            <p>telefonos con configuracion ip de alto alcance</p>
-            <p>
-			<a href="#" class="btn btn-default producto" precio="61" titulo="Telefonos ip" role="button">Comprar</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
+   
+       <div class="container-fluid contenido">
             
-             <footer id="pie" class="col-md-12">
-                Gracias por su compra buen dia 
-            </footer>   
-        </section>
+        <div class="row">
+        <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12">
         </div>
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+            <br>
+            <center><font face="Comic Sans MS"><h1>Productos de Telefonía</h1></font></center>
+            <div class="row">
+            <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" class="form-style-5">
+                                        <br>
+                                        <br>
+                                        <img data-src="holder.js/100%x200" alt="100%x200" src="imagen1.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                                        <div class="caption">
+                                            <center>
+                                                <font face="Comic Sans MS"><h4>Teléfonos analógos</h4></font>
+                                                <font face="Comic Sans MS" style="color:blue"><h5>$2065</h5></font>
+                                                <font face="Comic Sans MS"><p>La señal analógica es menos complicada y menos costosa que la digital.</p></font>
+                                                <p><a href="#" class="btn btn-primary producto" precio="2065" titulo="Telefonos analogos"role="button">Comprar</a></p>
+                                            </center>
+                                          
+                                        </div>
+                                    </div>
+
+                                </tr>
+                                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" class="form-style-5">
+                                        <br>
+                                        <br>
+                                        <img data-src="holder.js/100%x200" alt="100%x200" src="imagen2.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                                        <div class="caption">
+                                            <center>
+                                                <font face="Comic Sans MS"><h4>Radio de dos vías</h4></font>
+                                                <font face="Comic Sans MS" style="color:blue"><h5>$2100</h5></font>
+                                                <font face="Comic Sans MS"><p>Radio normal equipado con un transmisor, y recibe una señal desde sólo ese transmisor.</p></font>
+                                                <p><a href="#" class="btn btn-primary producto" precio="2100" titulo="Radio de dos vias" role="button">Comprar</a></p>
+                                            </center>
+                                          
+                                        </div>
+                                  </div>
+                                <tr>
+                                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" class="thumbnail">
+                                        <br>
+                                        <br>
+                                        <img data-src="holder.js/100%x200" alt="100%x200" src="imagen3.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                                        <div class="caption">
+                                            <center>
+                                                <font face="Comic Sans MS"><h4>Teláfonos inalámbricos</h4></font>
+                                                <font face="Comic Sans MS" style="color:blue"><h5>$2400</h5></font>
+                                                <font face="Comic Sans MS"><p>Utiliza tecnología que mejora la seguridad de las comunicaciones.</p></font>
+                                                <p><a  href="#" class="btn btn-primary producto" precio="2400" titulo="Telefonos inalambricos" role="button">Comprar</a></p>
+                                            </center>
+                                       </div>
+                                    </div>
+                                    
+                                </tr>
+                                <tr>
+                                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" class="thumbnail">
+                                        <br>
+                                        <br>
+                                        <img data-src="holder.js/100%x200" alt="100%x200" src="imagen4.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                                        <div class="caption">
+                                            <center>
+                                                <font face="Comic Sans MS"><h4>Teléfonos IP</h4></font>
+                                                <font face="Comic Sans MS" style="color:blue"><h5>$1500</h5></font>
+                                                <font face="Comic Sans MS"><p>Configuracion de alto alcance.</p></font>
+                                                <p><a class="btn btn-primary producto" href="#"  precio="1500" titulo="Telefonos ip" role="button">Comprar</a></p>
+                                            </center>
+                                           
+                                        </div>
+                                    </div>
+                                </tr>
+                                <tr>
+                                    
+                                </tr>
+                            </thead>
+             </table>
+           
+      </div>
+    
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12">
+                </div>
+              
+       </div>
     </div>
+
 	<script src="minicart.js"></script>
 	<script>
 	  // configuración inicial del carrito 
