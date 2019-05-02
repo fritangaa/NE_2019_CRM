@@ -139,7 +139,6 @@ and open the template in the editor.
                                                 <font face="Comic Sans MS"><h4>Fibra optica</h4></font>
                                                 <font face="Comic Sans MS" style="color:blue"><h5>$285</h5></font>
                                                 <font face="Comic Sans MS"><p>Venta por metro.</p></font>
-                                                <p><a href="#" class="btn btn-primary producto" precio="285" titulo="fibra" role="button">Comprar</a></p>
                                             
                                             </center>
                                           
@@ -156,7 +155,6 @@ and open the template in the editor.
                                                 <font face="Comic Sans MS"><h4>UTP</h4></font>
                                                 <font face="Comic Sans MS" style="color:blue"><h5>$30</h5></font>
                                                 <font face="Comic Sans MS"><p>Pares trenzados</p></font>
-                                                <p><a href="#" class="btn btn-primary producto" precio="30" titulo="UTP"  role="button">Comprar</a></p>
                                             </center>
                                           
                                         </div>
@@ -171,7 +169,6 @@ and open the template in the editor.
                                                 <font face="Comic Sans MS"><h4>Coaxial</h4></font>
                                                 <font face="Comic Sans MS" style="color:blue"><h5>$150</h5></font>
                                                 <font face="Comic Sans MS"><p>Alta duración en exteriores.</p></font>
-                                                <p><a href="#" class="btn btn-primary producto" precio="150" titulo="cable coaxial" role="button">Comprar</a></p>
                                             
                                             </center>
                                           

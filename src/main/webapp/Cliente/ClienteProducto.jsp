@@ -142,7 +142,6 @@ and open the template in the editor.
                                                 <font face="Comic Sans MS"><h4>Teléfonos analógos</h4></font>
                                                 <font face="Comic Sans MS" style="color:blue"><h5>$2065</h5></font>
                                                 <font face="Comic Sans MS"><p>La señal analógica es menos complicada y menos costosa que la digital.</p></font>
-                                                <p><a href="#" class="btn btn-primary producto" precio="2065" titulo="Telefonos analogos"role="button">Comprar</a></p>
                                             </center>
                                           
                                         </div>
@@ -158,7 +157,6 @@ and open the template in the editor.
                                                 <font face="Comic Sans MS"><h4>Radio de dos vías</h4></font>
                                                 <font face="Comic Sans MS" style="color:blue"><h5>$2100</h5></font>
                                                 <font face="Comic Sans MS"><p>Radio normal equipado con un transmisor, y recibe una señal desde sólo ese transmisor.</p></font>
-                                                <p><a href="#" class="btn btn-primary producto" precio="2100" titulo="Radio de dos vias" role="button">Comprar</a></p>
                                             </center>
                                           
                                         </div>
@@ -173,7 +171,6 @@ and open the template in the editor.
                                                 <font face="Comic Sans MS"><h4>Teláfonos inalámbricos</h4></font>
                                                 <font face="Comic Sans MS" style="color:blue"><h5>$2400</h5></font>
                                                 <font face="Comic Sans MS"><p>Utiliza tecnología que mejora la seguridad de las comunicaciones.</p></font>
-                                                <p><a  href="#" class="btn btn-primary producto" precio="2400" titulo="Telefonos inalambricos" role="button">Comprar</a></p>
                                             </center>
                                        </div>
                                     </div>
@@ -189,7 +186,6 @@ and open the template in the editor.
                                                 <font face="Comic Sans MS"><h4>Teléfonos IP</h4></font>
                                                 <font face="Comic Sans MS" style="color:blue"><h5>$1500</h5></font>
                                                 <font face="Comic Sans MS"><p>Configuracion de alto alcance.</p></font>
-                                                <p><a class="btn btn-primary producto" href="#"  precio="1500" titulo="Telefonos ip" role="button">Comprar</a></p>
                                             </center>
                                            
                                         </div>

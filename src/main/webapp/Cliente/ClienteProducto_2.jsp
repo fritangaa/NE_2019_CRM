@@ -139,7 +139,6 @@ and open the template in the editor.
                                                 <font face="Comic Sans MS"><h4>Repetidor</h4></font>
                                                 <font face="Comic Sans MS" style="color:blue"><h5>$1000</h5></font>
                                                 <font face="Comic Sans MS"><p>Duplica la señal.</p></font>
-                                                <p><a href="#" class="btn btn-primary producto" precio="1000" titulo="Repetidor de señal" role="button">Comprar</a></p>
                                             
                                             </center>
                                           
@@ -156,7 +155,6 @@ and open the template in the editor.
                                                 <font face="Comic Sans MS"><h4>SWITCH</h4></font>
                                                 <font face="Comic Sans MS" style="color:blue"><h5>$15000</h5></font>
                                                 <font face="Comic Sans MS"><p>24 puertos</p></font>
-                                                <p><a href="#" class="btn btn-primary producto" precio="15000" titulo="switch"  role="button">Comprar</a></p>
                                             </center>
                                           
                                         </div>

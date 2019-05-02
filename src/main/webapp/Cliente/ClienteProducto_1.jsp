@@ -138,7 +138,6 @@ and open the template in the editor.
                                                 <font face="Comic Sans MS"><h4>RJ45</h4></font>
                                                 <font face="Comic Sans MS" style="color:blue"><h5>$15</h5></font>
                                                 <font face="Comic Sans MS"><p>Para cableado interno.</p></font>
-                                                <p><a href="#" class="btn btn-primary producto" precio="15" titulo="RJ45"role="button">Comprar</a></p>
                                             
                                             </center>
                                           
@@ -155,7 +154,6 @@ and open the template in the editor.
                                                 <font face="Comic Sans MS"><h4>Coaxial</h4></font>
                                                 <font face="Comic Sans MS" style="color:blue"><h5>$50</h5></font>
                                                 <font face="Comic Sans MS"><p>Rigido.</p></font>
-                                                <p><a href="#" class="btn btn-primary producto" precio="50" titulo="conector coaxial"  role="button">Comprar</a></p>
                                             </center>
                                           
                                         </div>
