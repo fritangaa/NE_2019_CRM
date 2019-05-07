@@ -76,13 +76,7 @@ and open the template in the editor.
                             <form action="Prod_stock.jsp" method="POST">
                                  <input class="btn btn-secondary form-control" id="stock" name="stock" type="submit" 
                                         style="background-color: #818B9F" value="Stocks"></form><br>
-                            <span id="titulo"><h5>Envíos</h5></span>
-                             <form action="Prod_envio.jsp" method="POST">
-                                 <input class="btn btn-secondary form-control" id="envio" name="envio" type="submit" 
-                                        style="background-color: #818B9F" value="Nuevo envío"></form><br>
-                                 <form action="Prod_listaenv.jsp" method="POST">
-                                 <input class="btn btn-secondary form-control" id="lis" name="lis" type="submit" 
-                                        style="background-color: #818B9F" value="Lista"></form><br>
+                           
                         </div>
                        </div>
                     </div>
